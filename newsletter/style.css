@@ -57,7 +57,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 500px;
+  width: 800px;
   margin: 0 auto;
   background: linear-gradient(to right, #fe5b60, #e169a6);
   border-radius: 10px;
@@ -125,7 +125,13 @@ body {
   color: #e169a6;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 800px) {
+  .newsletter-container {
+    width: 600px;
+  }
+}
+
+@media (max-width: 600px) {
   .text-container {
       flex-direction: column;
   }
