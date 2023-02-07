@@ -1,0 +1,189 @@
+
+
+/* Add CSS here */
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  font-family: 'Rubik', sans-serif;
+  color: grey;
+}
+
+.music-player {
+  height: auto;
+  min-width: 300px;
+  box-shadow: 0 0 10px rgba(0, 128, 128, 0.5);
+}
+
+.icon {
+  color: rgba(128, 128, 128, 0.8);
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.top-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: .5rem;
+  margin-inline: 1rem;
+  height: 10%;
+}
+
+.song-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.song-title h3 {
+  font-size: .9rem;
+  color: #444;
+}
+.song-title p {
+  font-size: .6rem;
+  color: rgba(128, 128, 128, 0.7);
+  margin-top: 5px;
+}
+
+.song-title p:first-child {
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: .8px;
+  margin-bottom: 5px;
+}
+
+.album-cover {
+  display: flex;
+  height: 150px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.album-cover img {
+  height: 100%;
+  width: 150px;
+  box-shadow:  0 0 5px 5px rgba(0, 128, 128, 0.5);
+}
+
+.song-duration {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.song-duration input {
+  position: relative;
+  appearance: none;
+  width: 80%;
+  height: 5px;
+  background: linear-gradient(to right, rgba(2, 198, 198, 0.7) 60%, #ddd 40%);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.song-duration input::-webkit-slider-thumb {
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  background: rgba(2, 198, 198, 0.7);
+  border-radius: 50%;
+  border: 5px solid #ddd;
+}
+
+.song-duration input::after {
+  position: absolute;
+  content: '02: 46';
+  top: 8px;
+  left: 0;
+  font-size: 0.7rem;
+  color: gray;
+}
+
+.song-duration input::before {
+  position: absolute;
+  content: '01: 12';
+  top: 8px;
+  right: 0;
+  font-size: 0.7rem;
+  color: gray;
+}
+
+.action-btns {
+  display: flex;
+  width: 85%;
+  margin: 0 auto;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.action-icons {
+  color: rgba(128, 128, 128, 0.8);
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.action-icons:hover {
+  color: rgba(2, 198, 198, 0.7);
+}
+
+.action-icons:nth-child(3) {
+  font-size: 2.8rem;
+}
+
+.song {
+  display: flex;
+  justify-content: flex-start;
+  margin: .85rem 1.75rem;
+  font-size: .85rem;
+}
+
+.song .duration {
+  margin-left: auto;
+}
+
+.song {
+  transition: all .35s;
+  cursor: pointer;
+}
+
+.song:hover {
+  padding: 5px;
+  border-radius: 10px;
+  scale: 1.1;
+  box-shadow: 0 0 5px rgba(2, 198, 198, 0.5);
+}
+
+.song.active {
+  color: #444;
+  font-weight: bold;
+  position: relative;
+  margin-left: 20px;
+}
+
+.song.active::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(2, 198, 198, 0.7);
+  position: relative;
+  top: 6px;
+  left: -5px;
+}
+
+.song.active:hover::before {
+  all: initial;
+}
+
