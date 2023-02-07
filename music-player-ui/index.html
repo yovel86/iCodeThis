@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+</head>
+
+<body>
+
+    <section class="music-player">
+
+        <!-- Song details -->
+        <div class="top-menu">
+            <span class="material-icons-outlined icon">menu</span>
+            <div class="song-title">
+                <p>Playing Now</p>
+                <h3>Save Your Tears</h3>
+                <p>- The Weeknd -</p>
+            </div>
+            <span class="material-icons-outlined icon">library_add</span>
+        </div>
+
+        <!-- Album Cover -->
+        <div class="album-cover">
+            <img src="https://i.scdn.co/image/ab67616d0000b27312a76d1b13ef07188f7dfbc9" alt="Album Cover">
+        </div>
+
+        <!-- Duration Visualizer -->
+        <div class="song-duration">
+            <input type="range" value="60">
+        </div>
+
+        <!-- Playback buttons -->
+        <div class="action-btns">
+            <span class="material-icons-outlined action-icons">replay</span>
+            <span class="material-icons-outlined action-icons">skip_previous</span>
+            <span class="material-icons-outlined action-icons">play_circle</span>
+            <span class="material-icons-outlined action-icons">skip_next</span>
+            <span class="material-icons-outlined action-icons">shuffle</span>
+        </div>
+        
+        <!-- List of Songs -->
+        <div class="songs-list">
+            <div class="song">
+                <p class="title">In Your Eyes</p>
+                <p class="duration">3:57</p>
+            </div>
+            <div class="song active">
+                <p class="title">Save Your Tears</p>
+                <p class="duration">3:35</p>
+            </div>
+            <div class="song">
+                <p class="title">Pray For Me</p>
+                <p class="duration">3:31</p>
+            </div>
+            <div class="song">
+                <p class="title">Die For You</p>
+                <p class="duration">4:20</p>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+
+</html>
