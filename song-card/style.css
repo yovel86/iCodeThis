@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+  
+  html {
+      font-family: 'Rubik', sans-serif;
+      background: aliceblue;
+  }
+  
+  body {
+      height: 100vh;
+  }
+  
+  .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      width: fit-content;
+      align-items: center;
+      gap: 1em;
+      padding: 1em;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .album-cover {
+      height: 120px;
+      width: 160px;
+      margin-right: .8em;
+  }
+  
+  .album-cover img {
+      height: 140%;
+      width: 100%;
+      border-radius: 10px;
+      margin-top: .5em;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .song-details {
+      margin-right: 1.5em;
+  }
+  
+  .song-details h2 {
+      font-weight: 700;
+      font-size: 1rem;
+  }
+  
+  .song-details p {
+      font-weight: 300;
+      font-size: .75rem;
+  }
+  
+  .icon {
+      color: #8da7ff;
+      border-radius: 50%;
+      padding: .3em;
+      box-shadow: 0 0 0 8px rgb(141, 167, 255, 0.2);
+      margin-right: .3em;
+      cursor: pointer;
+      transition: all .2s;
+  }
+  
+  .icon:hover {
+      box-shadow: 0 0 0 8px rgb(141, 167, 255, .8);
+  }
+  
+  @media (max-width: 550px) {
+      .album-cover {
+          width: 200px;
+          height: 120px;
+      }
+  
+      .album-cover img {
+          width: 100%;
+          height: 120%;
+          transform: translateY(10px);
+      }
+  }
+  
+  @media (max-width: 500px) {
+      .container {
+          flex-direction: column;
+          width: 75%;
+          align-items: flex-start;
+      }
+  
+      .album-cover {
+          width: 100%;
+          height: 200px;
+      }
+  
+      .album-cover img {
+          height: 100%;
+          box-shadow: none;
+      }
+  
+      .song-details h2 {
+          font-size: 1rem;
+          margin-top: 10px;
+      }
+  
+      .song-details p {
+          font-size: .7rem;
+      }
+  
+      .play-btn {
+          align-self: center;
+      }
+  
+      .icon {
+          font-size: 1.2rem;
+          margin-block: .5rem;
+      }
+  }
