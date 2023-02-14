@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    
+    <div class="video-container" data-volume-level="high">
+
+        <div class="video-title">
+            <p>Elephant's Dream • <span>Blender Foundation</span></p>
+            <span class="material-icons share-btn">share</span>
+            <span class="material-icons menu-btn">menu</span>
+        </div>
+
+        <div class="video-controls-container">
+            
+            <div class="controls">
+
+                <span class="material-icons play-pause-btn">play_arrow</span>
+
+                <div class="timeline-container">
+                    <div class="timeline">
+                        <div class="thumb"></div>
+                    </div>
+                </div>
+
+                <div class="duration-container">
+                    <div class="current-time">0:00</div>
+                    /
+                    <div class="total-time">10:00</div>
+                </div>    
+
+                <div class="volume-container">
+                    <button class="audio-btn">
+                        <span class="material-icons volume-high-icon">volume_up</span>
+                        <span class="material-icons volume-down-icon">volume_down</span>
+                        <span class="material-icons volume-off-icon">volume_off</span>
+                    </button>
+
+                    <input type="range" class="volume-slider" min="0" max="1" step="any" value="1">
+                </div>
+
+                <span class="material-icons mini-player-btn">open_in_new</span>
+                <span class="material-icons screen-btn">fullscreen</span>
+            </div>
+
+        </div>
+
+        <video 
+            class="video-player__video"
+            src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" 
+            
+        >
+        </video>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
