@@ -1,0 +1,211 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/css/multi-select-tag.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>In Progress</h2>
+
+        <div class="kanban-container">
+
+            <div class="kanban-card">
+
+                <div class="kanban-card__icon">
+                    <img src="https://seeklogo.com/images/U/uber-logo-2BB8EC4342-seeklogo.com.png">
+                </div>
+
+                <div class="kanban-card__details">
+
+                    <div class="top-row">
+                        <p class="priority">High</p>
+                        <p class="date">18 Dec 2017</p>
+                    </div>
+
+                    <div class="title">
+                        Prepare Structural Documentation
+                    </div>
+
+                    <div class="tags">
+                        <p>Development</p>
+                        <p>Architecture</p>
+                    </div>
+
+                    <div class="bottom-row">
+                        <span class="material-icons-outlined">
+                        groups_2
+                        </span>
+                        <p>3 people work on this</p>
+                        <span class="material-icons-outlined comments">
+                        question_answer
+                        </span>
+                        <p>17 Comments</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="kanban-card">
+
+                <div class="kanban-card__icon">
+                    <img src="https://d18qs7yq39787j.cloudfront.net/uploads/company/950/Bosch-logo-7.png">
+                </div>
+
+                <div class="kanban-card__details">
+
+                    <div class="top-row">
+                        <p class="priority">Medium</p>
+                        <p class="date">18 Dec 2017</p>
+                    </div>
+
+                    <div class="title">
+                        Update Requirement List
+                    </div>
+
+                    <div class="tags">
+                        <p>Development</p>
+                        <p>Management</p>
+                    </div>
+
+                    <div class="bottom-row">
+                        <span class="material-icons-outlined">
+                                    groups_2
+                                    </span>
+                        <p>2 people work on this</p>
+                        <span class="material-icons-outlined comments">
+                                    question_answer
+                                    </span>
+                        <p>8 Comments</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="kanban-card">
+
+                <div class="kanban-card__icon">
+                    <img src="https://toulouseboutiques.com/wp-content/uploads/2019/10/Adidas-Toulouse.jpg">
+                </div>
+
+                <div class="kanban-card__details">
+
+                    <div class="top-row">
+                        <p class="priority">Low</p>
+                        <p class="date">18 Dec 2017</p>
+                    </div>
+
+                    <div class="title">
+                        New UI for Dashboard
+                    </div>
+
+                    <div class="tags">
+                        <p>Development</p>
+                        <p>Architecture</p>
+                    </div>
+
+                    <div class="bottom-row">
+                        <span class="material-icons-outlined">
+                                    groups_2
+                                    </span>
+                        <p>7 people work on this</p>
+                        <span class="material-icons-outlined comments">
+                                    question_answer
+                                    </span>
+                        <p>7 Comments</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="addBtn">
+            <span>+</span>
+            <p>Add New Card</p>
+        </div>
+
+    </div>
+
+    <form action="/" class="form-container hide" id="taskForm">
+
+        <h2>Add New Task</h2>
+
+        <div class="form-control">
+            <label for="task">Task</label>
+            <input type="text" id="task" name="task" required>
+        </div>
+
+        <div class="form-control">
+            <label for="tags">Tags</label>
+            <select name="tags" id="tags" multiple class="tagInput" required>
+                <option value="Development">Development</option>
+                <option value="Testing">Testing</option>
+                <option value="Architecture">Architecture</option>
+                <option value="Management">Management</option>
+            </select>
+        </div>
+
+        <div class="form-control">
+            <label for="priority">Priority</label>
+            <select name="priority" id="priority" required>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+        </div>
+
+        <div class="form-control">
+            <label for="company">Company</label>
+            <select name="company" id="company" required>
+                <option value="Adidas">Adidas</option>
+                <option value="Bosch">Bosch</option>
+                <option value="Uber">Uber</option>
+                <option value="Zomato">Zomato</option>
+                <option value="Jio">Jio</option>
+            </select>
+        </div>
+
+        <div class="form-control">
+            <label for="no-of-people">
+                No of People Working
+            </label>
+            <input type="number" name="noOfPeople" required>
+        </div>
+
+        <div class="addTask">
+            <button class="addTaskBtn">Add Task</button>
+        </div> 
+
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/js/multi-select-tag.js"></script>
+    <script src="script.js"></script>
+    <script>
+        new MultiSelectTag('tags', {
+            rounded: true,    // default true
+            shadow: true      // default false
+        });
+    </script>
+
+</body>
+
+</html>
