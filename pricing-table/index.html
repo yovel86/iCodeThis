@@ -1,0 +1,78 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+</head>
+
+<body>
+    
+    <div class="container">
+
+        <div class="top-row">
+
+            <h2>Choose Your Plan</h2>
+            
+            <div class="switch-box">
+                <div class="button-box">
+                    <div id="btn"></div>
+                    <button class="toggle-btn" onclick="switchLeft()">Monthly</button>
+                    <button class="toggle-btn" onclick="switchRight()">Yearly</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="price-card-row">
+
+            <div class="price-card">
+
+                <h3>Starter</h3>
+
+                <div class="price">
+                    <h4>$ 8.99 / month</h4>
+                    <p>Billed yearly</p>
+                </div>
+                
+                <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab architecto hic voluptas dicta vero rerum eum voluptatum facilis, aliquam.</p>
+                <button class="getStartedBtn">Get Started</button>
+
+            </div>
+
+            <div class="price-card">
+            
+                <h3>Professional</h3>
+            
+                <div class="price">
+                    <h4>$ 21.99 / month</h4>
+                    <p>Billed yearly</p>
+                </div>
+            
+                <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab architecto hic voluptas dicta
+                    vero rerum eum voluptatum facilis, aliquam.</p>
+                    
+                <button class="getStartedBtn">Get Started</button>
+            
+            </div>
+            
+
+        </div>
+
+    </div>    
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
