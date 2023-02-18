@@ -3,6 +3,7 @@ const addTask = document.querySelector('.addTaskBtn');
 const kanbanContainer = document.querySelector('.kanban-container');
 const container = document.querySelector('.container');
 const formContainer = document.querySelector('.form-container');
+const closeIcon = document.querySelectorAll('#closeIcon');
 
 const companyLogos = {
     'Adidas': 'https://toulouseboutiques.com/wp-content/uploads/2019/10/Adidas-Toulouse.jpg',
@@ -10,21 +11,6 @@ const companyLogos = {
     'Uber': 'https://seeklogo.com/images/U/uber-logo-2BB8EC4342-seeklogo.com.png',
     'Zomato': 'https://upload.wikimedia.org/wikipedia/commons/7/75/Zomato_logo.png',
     'Jio': 'https://newszon.in/wp-content/uploads/2021/11/cropped-reliance-jio-logo.jpg'
-}
-
-checkPriority();
-
-function checkPriority() {
-    const priority = document.querySelectorAll('.priority');
-    for (let p of priority) {
-        if (p.textContent === 'High') {
-            p.style.backgroundColor = '#f26092';
-        } else if (p.textContent === 'Medium') {
-            p.style.backgroundColor = '#3ba3f8';
-        } else {
-            p.style.backgroundColor = '#43c3b6'
-        }
-    }
 }
 
 addBtn.addEventListener('click', () => {
@@ -78,6 +64,8 @@ addTask.addEventListener('click', (e) => {
                     <p>1 Comments</p>
                 </div>
 
+                <span class="material-icons-outlined" id="closeIcon">close</span>
+
             </div>
 
         </div>`;
@@ -86,6 +74,36 @@ addTask.addEventListener('click', (e) => {
     formContainer.classList.toggle('hide');
     container.classList.toggle('hide');
     checkPriority();
+    closeIconListener();
 
 });
+
+checkPriority();
+
+function checkPriority() {
+    const priority = document.querySelectorAll('.priority');
+    for (let p of priority) {
+        if (p.textContent === 'High') {
+            p.style.backgroundColor = '#f26092';
+        } else if (p.textContent === 'Medium') {
+            p.style.backgroundColor = '#3ba3f8';
+        } else {
+            p.style.backgroundColor = '#43c3b6'
+        }
+    }
+}
+
+closeIconListener();
+
+function closeIconListener() {
+    const kanbanContainer = document.querySelector('.kanban-container');
+    const kanbanCards = document.querySelectorAll('.kanban-card');
+    const closeIcon = document.querySelectorAll('#closeIcon');
+    for(let i = 0; i < closeIcon.length; i++) {
+        closeIcon[i].addEventListener('click', () => {
+            kanbanContainer.removeChild(kanbanCards[i]);
+        });
+    }
+}
+
 

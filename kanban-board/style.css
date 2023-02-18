@@ -45,10 +45,12 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   transition: all .3s;
   cursor: pointer;
+  position: relative;
 }
 
 .kanban-card:hover {
   transform: scale(1.1);
+  z-index: 10;
 }
 
 .kanban-card__icon {
@@ -87,6 +89,7 @@ body {
   color: #687479;
   font-size: .8rem;
   margin-left: auto;
+  margin-right: 10px;
 }
 
 .kanban-card__details .title {
@@ -156,6 +159,19 @@ body {
 
 .addBtn span {
   font-size: 2rem;
+}
+
+#closeIcon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 1rem;
+  transition: all .2s;
+}
+
+#closeIcon:hover {
+  color: red;
+  scale: 1.1;
 }
 
 @media (width <= 550px) {
