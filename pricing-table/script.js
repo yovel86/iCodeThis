@@ -1,5 +1,6 @@
 const toggleBtn = document.querySelector('#btn');
 const perPrice = document.querySelectorAll('.price h4');
+const billed = document.querySelectorAll('.price p');
 
 function switchRight() {
     toggleBtn.style.left = '85px';
@@ -9,6 +10,7 @@ function switchRight() {
         } else {
             perPrice[i].textContent = '$125.99 / year';
         }
+        billed[i].textContent = 'Billed Yearly';
     }
 }
 
@@ -20,6 +22,7 @@ function switchLeft() {
         } else {
             perPrice[i].textContent = '$21.99 / month';
         }
+        billed[i].textContent = 'Billed Monthly';
     }
 }
 
