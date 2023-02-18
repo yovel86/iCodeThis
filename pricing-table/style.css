@@ -1,0 +1,132 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  color: #171922;
+  font-family: 'Rubik', sans-serif;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 60%;
+  margin: 0 auto;
+  padding: 1em;
+  gap: 2em;
+}
+
+.container .top-row {
+  display: flex;
+}
+
+.switch-box {
+  margin-left: auto;
+}
+
+.switch-box .button-box {
+  position: relative;
+  width: 180px;
+  height: fit-content;
+  padding: 5px;
+  background: #d4d9e0;
+  border-radius: 100px;
+}
+
+.button-box .toggle-btn {
+  position: relative;
+  color: #171922;
+  font-weight: bold;
+  padding: .8em 1.2em;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  text-align: center;
+  font-family: inherit;
+}
+
+.button-box #btn {
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  background: white;
+  text-align: center;
+  width: 50%;
+  height: 85%;
+  border-radius: 100px;
+  padding: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  transition: all .3s;
+}
+
+.price-card-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+}
+
+.price-card-row .price-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  padding: 1.5em;
+  gap: 1em;
+  box-shadow: 0 0 10px rgba(160, 147, 147, 0.5);
+  border-radius: 6px;
+  animation: animate-card 1s;
+}
+
+.price-card .price {
+  display: flex;
+  flex-direction: column;
+  gap: .2em;
+}
+
+.price-card .price p {
+  color: #666;
+  font-size: .85rem;
+}
+
+.price-card .description {
+  color: #666;
+  font-size: .8rem;
+}
+
+.getStartedBtn {
+  background: transparent;
+  padding: .8em 3em;
+  border-radius: 5px;
+  border: 2px solid #171922;
+  font-family: inherit;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.getStartedBtn:hover {
+  color: white;
+  background: #171922;
+}
+
+@media (width <= 500px) {
+  .price-card-row {
+      grid-template-columns: 1fr;
+  }
+}
+
+@keyframes animate-card {
+  0% {
+    transform: translateY(300px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
