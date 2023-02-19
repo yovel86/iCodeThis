@@ -1,0 +1,125 @@
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #feffff;
+  display: grid;
+  place-content: center;
+  font-family: 'Rubik', sans-serif;
+  min-height: 100vh;
+  background: #1d2259;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  max-width: 45ch;
+  padding: 1.5em;
+  border-top: 4px solid #f70797;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.top-row {
+  display: flex;
+  align-items: center;
+}
+
+.top-row .top-row__title {
+  display: flex;
+  flex-direction: column;
+  gap: .2em;
+}
+
+.top-row .top-row__title p {
+  color: #b1b2c3;
+  font-size: .8rem;
+}
+
+.top-row span {
+  margin-left: auto;
+  cursor: pointer;
+  padding: .25em;
+  border: 1px solid #111447;
+  border-radius: 50%;
+}
+
+.description {
+  color: #b1b2c3;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+.task-row {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.task-row :is(h3, p) {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.task-row .task-completion {
+  position: relative;
+  flex-grow: 1;
+  height: 8px;
+  border-radius: 10px;
+  background: #111447;
+}
+
+.task-row .task-completion::before {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(to right, #0ce4c6, #62d5e8);
+}
+
+.bottom-row {
+  display: flex;
+  gap: 1.5em;
+}
+
+.bottom-row img {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  outline: 2px solid #f70797;
+  outline-offset: 4px;
+  object-fit: cover;
+  filter: brightness(80%);
+  cursor: pointer;
+  transition: all .4s;
+}
+
+.bottom-row img:first-child {
+  z-index: 4;
+}
+
+.bottom-row img:nth-child(2) {
+  transform: translateX(-60px);
+  z-index: 3;
+}
+
+.bottom-row img:nth-child(3) {
+  transform: translateX(-115px);
+  z-index: 2;
+}
+
+.bottom-row img:nth-child(4) {
+  transform: translateX(-175px);
+  z-index: 1;
+}
+
+:has(.bottom-row:hover) .bottom-row img {
+  transform: translateX(0);
+}
+
+
