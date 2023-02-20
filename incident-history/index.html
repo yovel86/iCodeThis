@@ -1,0 +1,137 @@
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    
+    <div class="container">
+
+        <div class="title-row">
+            <h2>Incident History</h2>
+            <div class="addBtn" onclick="dialog.showModal()">
+                <p>Add New Incident</p>
+                <span class="material-icons-outlined">
+                add
+                </span>
+            </div>
+        </div>
+
+        <div class="incident-container">
+
+            <div class="incident">
+
+                <h3>Mar 8, 2022</h3>
+
+                <div class="incident__title">
+                    <h2>Users are unable to arrange screens</h2>
+                    <h3>Resolved</h3>
+                </div>
+
+                <div class="incident__description">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam molestiae saepe nostrum distinctio deleniti earum ipsum
+                    nihil aliquid praesentium libero?</p>
+                </div>
+
+                <div class="incident__open">
+                    <p>Full Report</p>
+                    <span class="material-icons-outlined">
+                    keyboard_double_arrow_right
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="incident">
+            
+                <h3>June 16, 2022</h3>
+            
+                <div class="incident__title">
+                    <h2>Cloud V7 users may be experiencing some slowness</h2>
+                    <h3>Monitoring</h3>
+                </div>
+            
+                <div class="incident__description">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam molestiae saepe nostrum distinctio deleniti
+                        earum ipsum
+                        nihil aliquid praesentium libero?</p>
+                </div>
+            
+                <div class="incident__open">
+                    <p>Full Report</p>
+                    <span class="material-icons-outlined">
+                    keyboard_double_arrow_right
+                    </span>
+                </div>
+            
+            </div>
+
+            <div class="incident">
+            
+                <h3>October 30, 2022</h3>
+            
+                <div class="incident__title">
+                    <h2>Some screens are not loading or loading intermittently</h2>
+                    <h3>Investigating</h3>
+                </div>
+            
+                <div class="incident__description">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam molestiae saepe nostrum distinctio deleniti
+                        earum ipsum
+                        nihil aliquid praesentium libero?</p>
+                </div>
+            
+                <div class="incident__open">
+                    <p>Full Report</p>
+                    <span class="material-icons-outlined">
+                    keyboard_double_arrow_right
+                    </span>
+                </div>
+            
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <dialog id="dialog">
+        <form class="incident-form">
+            <input type="text" placeholder="Incident Title..." name="title" class="title">
+            <input type="text" placeholder="About the Incident" name="details" class="details">
+            <div class="status-input">
+                <label>
+                    <input type="radio" name="status" value="Open">
+                    <span class="status">Open</span>
+                </label>
+                <label>
+                    <input type="radio" name="status" value="Monitoring">
+                    <span class="status">Monitoring</span>
+                </label>
+                <label>
+                    <input type="radio" name="status" value="Investigating">
+                    <span class="status">Investigating</span>
+                </label>
+            </div>
+            <button class="add-incident-btn">Add Incident</button>
+        </form>
+    </dialog>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

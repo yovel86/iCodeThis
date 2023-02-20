@@ -76,7 +76,7 @@ body {
 .task-row .task-completion::before {
   content: '';
   position: absolute;
-  width: 50%;
+  width: 43%;
   height: 100%;
   border-radius: 10px;
   background: linear-gradient(to right, #0ce4c6, #62d5e8);
