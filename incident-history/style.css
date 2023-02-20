@@ -1,0 +1,240 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #252c41;
+  font-family: 'Rubik', sans-serif;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: min(700px, 90%);
+  margin: 3em auto;
+  padding: 1em;
+  gap: 2.5em;
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  gap: 1em;
+}
+
+.title-row h2 {
+  width: fit-content;
+}
+
+.title-row .addBtn {
+  display: flex;
+  align-items: center;
+  gap: .5em;
+  font-size: .95rem;
+  background: #10182f;
+  color: #f7f8fc;
+  padding: .5em 1em;
+  border-radius: 5px;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.title-row .addBtn span {
+  transform: all 1s;
+}
+
+:has(.title-row .addBtn:hover) .title-row .addBtn span {
+  transform: rotate(180deg);
+  color: red;
+}
+
+.incident-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.incident {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 2em;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: all 1s;
+}
+
+.incident h3 {
+  font-size: .8rem;
+}
+
+.incident:not(:first-child)::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 2em;
+  background: rgba(37, 44, 65, 0.65);
+  top: -32px;
+}
+
+.incident__title {
+  display: flex;
+  align-items: center;
+  font-size: .8rem;
+  gap: 1em;
+}
+
+.incident__title h3 {
+  color: #fff;
+  background: green;
+  font-weight: 400;
+  padding: .3em .5em;
+  border-radius: 5px;
+  margin-left: auto;
+}
+
+.incident__description p {
+  font-size: .85rem;
+}
+
+.incident__open {
+  display: flex;
+  align-items: center;
+  gap: .2em;
+  font-size: .8rem;
+  border: 1px solid #666;
+  border-radius: 5px;
+  background: #f7f8fc;
+  color: #666;
+  width: fit-content;
+  padding: .3em .8em;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.incident__open span {
+  font-size: 1rem;
+}
+
+.incident__open:hover {
+  background: #10182f;
+  color: #f7f8fc;
+  gap: 1em;
+}
+
+@media (width <= 600px) {
+  .title-row {
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+  }
+
+  .title-row .addBtn {
+    margin-left: 0;
+  }
+}
+
+@media (width <= 400px) {
+    .incident__title {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* Incident Form */
+dialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 3em 4em;
+  border: none;
+  border-radius: 10px;
+}
+
+dialog form {
+  width: 500px;
+}
+
+dialog::backdrop {
+  backdrop-filter: blur(3px);
+}
+
+dialog .incident-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+}
+
+dialog .incident-form input {
+  font-family: inherit;
+  font-size: 1.1rem;
+  width: 100%;
+  border: none;
+  padding: .5em;
+  border-bottom: .5px solid #10182f;
+}
+
+dialog .incident-form input:focus-visible {
+  outline: none;
+}
+
+dialog .incident-form button {
+  font-family: inherit;
+  background: transparent;
+  color: #10182f;
+  font-size: 1rem;
+  border: 1px solid #10182f;
+  text-transform: uppercase;
+  width: fit-content;
+  padding: .5em 1em;
+  border-radius: 5px;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+dialog .incident-form button:hover {
+  color: #f7f8fc;
+  background: #10182f;
+}
+
+.status-input {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+} 
+
+.status-input .status {
+  font-size: .8rem;
+  padding: .5em .75em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all .3s;
+  color: #10182f;
+  border: 1px solid #10182f;
+}
+
+.status-input .status:hover {
+  color: #f7f8fc;
+  background: #10182f;
+}
+
+.status-input input[type="radio"] {
+  appearance: none;
+  border: none;
+}
+
+.status-input input[type="radio"]:checked + .status {
+  color: #f7f8fc;
+  background: #10182f;
+}
+
+
+
