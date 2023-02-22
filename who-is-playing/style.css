@@ -1,0 +1,147 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  font-family: 'Rubik', sans-serif;
+  background: #1a182d;
+  min-height: 100vh;
+  -webkit-perspective: 800px;
+  perspective: 800px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  padding: 1.5em 0;
+  color: #eee;
+  background: #141324;
+  border-radius: 10px;
+  width: 500px;
+}
+
+.users-card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 1em;
+}
+
+.user-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5em;
+  padding: 1em .5em;
+  background: #1a182d;
+  flex-basis: 100%;
+  border-radius: 10px;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.user-card:hover {
+  scale: 1.1;
+  box-shadow: 0 0 5px #4b80b9;
+}
+
+.user-card img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.side img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.user-card p {
+  font-size: .8rem;
+}
+
+.add-user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  border: 2px dashed #4b80b9;
+  color: #4b80b9;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.add-user span {
+  transition: all .3s;
+}
+
+.add-user p {
+  font-size: .8rem;
+  transition: all .3s;
+}
+
+.add-user:hover {
+  border: 4px dashed #4b80b9;
+}
+
+:has(.add-user:hover) .add-user span {
+  scale: 1.1;
+}
+
+:has(.add-user:hover) .add-user p {
+  scale: 1.2;
+}
+
+.container button {
+  color: #4b80b9;
+  background: transparent;
+  font-family: inherit;
+  border: 1px solid #4b80b9;
+  border-radius: 100px;
+  width: fit-content;
+  padding: .5em 1.5em;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.container button:hover {
+  color: #eee;
+  background: #4b80b9;
+}
+
+@media (width <= 500px) {
+
+  .container h2 {
+    font-size: 1.25rem;
+  }
+
+  .container {
+    width: 100%;
+    padding: 2em 1.5em;
+  }
+
+  .users-card-container {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .add-user {
+    padding: .5em 0;
+    gap: .25em;
+  }
+
+}
+
+
+
+
+
+
