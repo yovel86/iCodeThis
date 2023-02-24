@@ -9,7 +9,8 @@ body {
     place-content: center;
     font-family: 'Source Sans Pro', sans-serif;
     min-height: 100vh;
-    background: #e6e6e6;
+    /* background: #e6e6e6; */
+    background: linear-gradient(to bottom right, pink, skyblue 10%, purple);
 }
 
 .container {
@@ -66,6 +67,19 @@ body {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     cursor: pointer;
+    animation: move-up .75s;
+}
+
+@keyframes move-up {
+    0% {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .top-row {
@@ -153,7 +167,7 @@ body {
     font-size: .9rem;
 }
 
-:has(.user:hover) .user-details {
+:has(.container:hover) .user-details {
     display: block;
 }
 
