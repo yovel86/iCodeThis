@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  font-family: 'DM Mono', monospace;
+  background-image: linear-gradient(to right bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  gap: 1em;
+  padding: .5em;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 1.25em;
+  width: 38ch;
+  height: 400px;
+  padding: 1em;
+  background: rgba(23, 20, 29, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: all 1s;
+}
+
+.card:nth-child(2) {
+  background: #17141d;
+}
+
+.card:nth-child(2):hover {
+  background: rgba(23, 20, 29, 0.5);
+}
+
+.card .actions {
+  display: flex;
+  gap: .5em;
+  align-items: center;
+}
+
+.card .actions span {
+  font-size: 1.75rem;
+  color: #a2dd51;
+  cursor: pointer;
+} 
+
+.card .actions .close {
+  color: #fff;
+  margin-left: auto;
+  transition: all .3s;
+}
+
+.card .actions .close:hover {
+  color: red;
+}
+
+.card p {
+  color: #fff;
+  padding: 0 2em;
+  text-align: center;
+  align-self: center;
+  transition: all .3s;
+}
+.card button {
+  font-size: 1.2rem;
+  font-family: inherit;
+  text-transform: uppercase;
+  align-self: center;
+  color: #17141d;
+  background: #a2dd51;
+  padding: .5em 3.5em;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+}
+
+.card button:hover {
+  box-shadow: 0 0 5px #a2dd51;
+}
+
+.card:first-child {
+  position: absolute;
+  top: -10px;
+  left: 8px; 
+  z-index: -1;
+}
+
+.card:last-child {
+  position: absolute;
+  top: -25px;
+  right: 8px;
+  z-index: -2;
+}
+
+:has(.card:nth-child(2):hover) .card:first-child {
+  top: 10px;
+  left: -380px;
+  cursor: pointer;
+}
+
+:has(.card:nth-child(2):hover) .card:last-child {
+  top: 10px;
+  right: -380px;
+  cursor: pointer;
+}
