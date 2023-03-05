@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  background: #15142d;
+  min-height: 100vh;
+}
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 2em;
+  padding: 1em;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  color: #fefefe;
+  padding-bottom: .25em;
+  transition: all .3s;
+}
+
+.navbar ul li {
+  position: relative;
+}
+
+.navbar ul li:first-child {
+  margin-left: auto;
+}
+
+.heading:hover {
+  background: linear-gradient(to right, #40c7e4, #468fe3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  border-image: linear-gradient(to right, #40c7e4, #468fe3);
+  border-image-slice: 1;
+  border-bottom: 2px solid;
+}
+
+.heading.active {
+  background: linear-gradient(to top right, #40c7e4, #468fe3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  border-image: linear-gradient(to top right, #40c7e4, #468fe3);
+  border-image-slice: 1;
+  border-bottom: 2px solid;
+}
+
+.heading:hover + .menu-sub {
+  display: grid !important;
+}
+
+.menu-sub {
+  position: absolute;
+  display: none;
+  grid-template-areas: 'first second third';
+  color: #222;
+  background: linear-gradient(to right, #40c7e4, #468fe3);
+  padding: 2em 4em;
+  gap: 3em;
+  border-radius: 10px;
+  top: 40px;
+  right: 10px;
+  animation: slide .5s;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 1.5em 0 0;
+  border-right: 1px solid rgba(34, 34, 34, 0.2);
+}
+
+.column:first-child {
+    grid-area: first;
+}
+
+.column:nth-child(2) {
+    grid-area: second;
+}
+
+.column:last-child {
+  width: 20ch;
+  border-right: none;
+  grid-area: third;
+}
+
+.column h3 {
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: .5em;
+  font-size: .85rem;
+  border-radius: 100px;
+  transition: all .3s;
+  cursor: pointer;
+  padding: .5em 1.25em;
+}
+
+.item:hover {
+  background: #86d3ed;
+}
+
+.item span {
+  transition: all .3s;
+}
+
+.item:hover > span {
+  margin-right: 5px;
+}
+
+.item p {
+  font-weight: 600;
+}
+
+.column .image {
+  position: relative;
+  width: 180px;
+  height: 140px;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(70, 143, 227, 0.25);
+  z-index: 10;
+}
+
+.column:last-child {
+  padding: 1em 0;
+  gap: 1em;
+}
+
+.column:last-child h3 {
+  font-size: .8rem;
+  font-weight: 800;
+}
+
+.column .details {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.info h4 {
+  font-size: .75rem;
+  margin-bottom: 2.5px;
+}
+
+.info p {
+  font-size: .72rem;
+}
+
+@media (width <= 1100px) {
+    .menu-sub {
+        right: -210px;
+    }
+}
+
+@media (width <= 800px) {
+    .menu-sub {
+        grid-template-areas: 'first second'
+                             'third third';
+        gap: 1em;
+    }
+
+    .column {
+        border-right: none;
+    }
+
+    .column h3 {
+        margin-bottom: 1em;
+    }
+
+    .column:last-child {
+        width: 50ch;
+        flex-direction: row;
+    }
+
+    .column .details {
+        padding: 1em;
+    }
+}
+
+@media (width <= 500px) {
+
+    .menu-sub {
+        grid-template-areas: 'first' 
+                             'second'
+                             'third';
+        width: 400px;
+        right: -80px;
+        padding: .75em 1em;
+    }
+
+    .item {
+        width: fit-content;
+    }
+
+    .column:last-child {
+        display: none;
+    }
+}
