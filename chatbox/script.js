@@ -38,20 +38,18 @@ admins.forEach((admin, i) => {
         admins.forEach(admin => admin.classList.remove('active'));
         admin.classList.add('active');
         if (i === 0) {
-            adminName.textContent = 'Einora';
-            currentAdmin.src = imgs[0].src;
-            currentAdminMsg.textContent = imgs[0].msg;
-            popupImg.src = imgs[0].src;
+            updateAdmin('Einora', 0);
         } else if (i === 1) {
-            adminName.textContent = 'Leila';
-            currentAdmin.src = imgs[1].src;
-            currentAdminMsg.textContent = imgs[1].msg;
-            popupImg.src = imgs[1].src;
+            updateAdmin('Leila', 1);
         } else {
-            adminName.textContent = 'Lucinda';
-            currentAdmin.src = imgs[2].src;
-            currentAdminMsg.textContent = imgs[2].msg;
-            popupImg.src = imgs[2].src;
+            updateAdmin('Lucinda', 2);
         }
     });
 });
+
+let updateAdmin = (name, index) => {
+  adminName.textContent = name;
+  currentAdmin.src = imgs[index].src;
+  currentAdminMsg.textContent = imgs[index].msg;
+  popupImg.src = imgs[index].src;
+}
