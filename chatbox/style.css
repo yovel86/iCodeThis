@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  font-family: 'Rubik', sans-serif;
+  color: #ffeeee;
+  min-height: 100vh;
+  background: #2f2d3f;
+}
+
+.chat-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  animation: animate-chat-box 1s;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  object-fit: cover; 
+}
+
+.top-row {
+  display: flex;
+  align-items: center;
+  background: #ff6969;
+  border-radius: 10px 10px 0 0;
+  padding: 1em;
+  gap: .75em;
+}
+
+.chat-box {
+  background: #282639;
+  flex: 1;
+}
+.contacts img {
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.contacts img:nth-child(2) {
+  transform: translateX(-25px);
+}
+
+.contacts img:last-child {
+  transform: translateX(-45px);
+}
+
+.contacts:hover img {
+  transform: translateX(0);
+}
+
+.contacts img:hover {
+  border: 3px solid #282639;
+}
+
+.contacts img.active {
+  border: 3px solid #282639;
+}
+
+.top-row .info p {
+  font-weight: 300;
+}
+
+.input-box {
+  display: flex;
+  align-items: center;
+  background: #282639;
+  border-radius: 0 0 10px 10px;
+  padding: .5em;
+}
+
+.input-box input {
+  flex: 1;
+  color: #ffeeee;
+  height: 50px;
+  border-radius: 10px;
+  background: #282639;
+  font-family: inherit;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5) inset;
+  border: none;
+  padding-left: 1em;
+  caret-color: #ff6969;
+}
+
+.input-box input:focus-visible {
+  outline: none;
+}
+
+::placeholder {
+  font-family: inherit;
+  padding-left: .2em;
+}
+
+.send-btn {
+  display: grid;
+  place-content: center;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  background: #2f2d3f;
+  margin-left: .5em;
+  transition: all .3s;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.send-btn:hover {
+  background: #282639;
+  border: 1px solid #ffeeee;
+  scale: 1.1;
+}
+
+.send-btn:active {
+  scale: 1;
+}
+
+.send-btn span {
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.chat-box {
+  display: flex;
+  flex-direction: column;
+  padding: 1em 1.5em;
+  align-items: center;
+}
+
+.admin-msg {
+  display: flex;
+  gap: 1em;
+}
+
+.admin-msg p {
+  background: #3a384c;
+  border-radius: 10px;
+  padding: .5em;
+}
+
+.cookies-msg {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  right: 5px;
+  background: #3a384c;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  border-radius: 10px;
+}
+
+.cookies-msg a {
+  color: #ff6969;
+}
+
+.cookies-msg button {
+  width: fit-content;
+  color: #ff6969;
+  border: 1px solid #ff6969;
+  background: #3a384c;
+  padding: .75em 1.5em;
+  border-radius: 100px;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.cookies-msg button:hover {
+  color: #ffeeee;
+  background-color: #ff6969;
+}
+
+.popup {
+  position: fixed;
+  top: 10%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-content: center;
+  margin-bottom: 1em;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #ff6969;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.popup span {
+  width: 100%;
+  height: 100%;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.popup:hover {
+  scale: 1.1;
+}
+
+.hide {
+  display: none;
+}
+
+
+@media (width <= 400px) {
+
+  .chat-container {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .contacts img:nth-child(2) {
+    transform: translateX(-15px);
+  }
+
+  .contacts img:last-child {
+    transform: translateX(-30px);
+  }
+
+  .contacts:hover img {
+    transform: translateX(0);
+  }
+  
+  .top-row .info h3 {
+    font-size: 1rem;
+  }
+
+  .top-row .info p {
+    font-size: .8rem;
+  }
+
+  .admin-msg p {
+    font-size: .85rem;
+  }
+
+  .cookies-msg {
+    padding: 1.25em;
+  }
+
+  .cookies-msg p {
+    font-size: .75rem;
+  }
+
+  .cookies-msg button {
+    font-size: .65rem;
+  }
+
+}
+
+@keyframes animate-chat-box {
+  0% {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
