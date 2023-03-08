@@ -1,0 +1,114 @@
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header-column">
+
+            <h1>Help us do more</h1>
+
+            <p>We'll get right to the point, we're asking you to support us. We're a non-profile that relies on the support from people like you. If everyone reading this gives 10$ monthly, we can thrive for years</p>
+
+        </div>
+
+        <div class="form-column">
+
+            <div class="frequency">
+
+                <p>Select gift frequency</p>
+
+                <div class="switch-box">
+                    <div class="button-box">
+                        <div id="btn"></div>
+                        <button class="toggle-btn" onclick="switchLeft()">Monthly</button>
+                        <button class="toggle-btn" onclick="switchRight()">One-time</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="amount">
+
+                <p>Select amount (In US dollar)</p>
+
+                <div class="prices">
+
+                    <label>
+                        <input type="radio" name="price" value="10" checked>
+                        10$
+                    </label>
+
+                    <label>
+                        <input type="radio" name="price" value="20">
+                        20$
+                    </label>
+
+                    <label>
+                        <input type="radio" name="price" value="30">
+                        30$
+                    </label>
+
+                    <label>
+                        <input type="radio" name="price" value="40">
+                        40$
+                    </label>
+
+                    <label>
+                        <input type="radio" name="price" value="50">
+                        50$
+                    </label>
+                    
+                </div>
+
+                <div class="extra">
+
+                    <label>
+                        <input type="checkbox" name="extra">
+                        <p>Yes, I'll generously add 0.75$ each month to cover the transaction fees</p> 
+                    </label>
+                    
+                </div>
+
+            </div>
+
+            <div class="form-control hide" id="your-amount">
+                <p>Amount</p>
+                <input type="text" placeholder="Enter your amount" class="your-amount">
+            </div>
+
+            <div class="form-control">
+                <p>Name</p>
+                <input type="text" placeholder="Enter your name" class="name">
+                <a href="#">Click here to give in honour of another person</a>
+            </div>
+
+            <button class="donate-btn">
+                Donate Now
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="success-msg">
+        <p>Thanks Yovel, for your 20$ donation!</p>
+        <span>🎊🎗️🎊</span>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
