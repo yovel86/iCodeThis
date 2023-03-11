@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  color: #333;
+  font-family: 'Rubik', sans-serif;
+  background: #f6f8fc;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5em;
+  max-width: 600px;
+  padding: 1em;
+}
+
+.top-row {
+  display: flex;
+  justify-content: space-around;
+  gap: 1em;
+  padding: 2em 1em;
+  background: #f2f3f9;
+  border-radius: 10px;
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.2);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em 1.5em;
+  padding: 1em .5em;
+  background: #f2f3f9;
+  border-radius: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 120px;
+  height: 140px;
+  transition: all .3s;
+}
+
+.card:hover {
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 
+              10px 10px 15px rgba(70, 70, 70, 0.2);
+}
+
+.card.active {
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 
+              10px 10px 15px rgba(70, 70, 70, 0.2);
+}
+
+.card svg {
+  padding: 1em;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+.card:first-child svg {
+  background: #fb7270;
+}
+
+.card:nth-child(2) svg {
+  background: #fcab70;
+}
+
+.card:last-child svg {
+  background: #7f7afe;
+}
+
+.card p {
+  font-size: .8rem;
+}
+
+.info {
+  /* background: #e6e9f3; */
+  background: #f2f3f9;
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 
+              10px 10px 15px rgba(70, 70, 70, 0.2),
+              5px 5px 5px rgba(70, 70, 70, 0.1) inset;
+}
+
+.info {
+  text-align: center;
+}
+
+.info a {
+    color: #7b90fd;
+    text-decoration: none;
+}
+
+.bottom-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+}
+
+button {
+  font-family: inherit;
+  padding: 1.5em 2em;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+button:first-child:hover {
+  box-shadow: 0 0 10px #7b90fd;
+}
+
+button:last-child:hover {
+  box-shadow: 0 0 15px 5px rgba(70, 70, 70, 0.2);
+}
+
+button:first-child {
+  color: #fff;
+  background: #7b90fd;
+}
+
+button:last-child {
+  color: #7b90fd;
+  background: #f2f3f9;
+  box-shadow: 0 0 15px rgba(70, 70, 70, 0.2);
+}
+
+@media (width <= 450px) {
+
+  .top-row {
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: 150px;
+    height: 140px;
+  }
+
+  .bottom-row {
+    grid-template-columns: 1fr;
+  }
+}
