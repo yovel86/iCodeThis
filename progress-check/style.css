@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  color: #c1c4f3;
+  font-family: 'Rubik', sans-serif;
+  background: #131832;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  gap: 3em;
+}
+
+.tracker {
+  display: flex;
+  flex-direction: column;
+  width: 50ch;
+  gap: 1em;
+  height: fit-content;
+  padding: 1.5em;
+  background: #1b2143;
+  border-radius: 10px;
+}
+
+.tablets {
+  display: flex;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.tablets .tab {
+  width: 40px;
+  height: 10px;
+  border-radius: 100px;
+  background: #131832;
+  transition: all .2s;
+}
+
+.checklist {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 2em 2.5em;
+  background: #1b2143;
+  border-radius: 10px;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+}
+
+.checklist label {
+  display: flex;
+  gap: .5em;
+  align-items: center;
+  cursor: pointer;
+  -webkit-tap-highlight-color: #ffffff00;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+}
+
+.checklist label span {
+  background: #131832;
+  border: 1px solid #ffffff83;
+  border-radius: 50%;
+  padding: 2.5px;
+  font-size: 1rem;
+  color: #131832;
+  transition: all .2s;
+}
+
+.checklist label span.active {
+  color: #fff;
+  background: #131832;
+}
+
+.tablets .tab.not-completed {
+  background: #111630;
+}
+
+.tab:first-child {
+  background: crimson;
+}
+
+.tab:nth-child(2) {
+  background: orange;
+}
+
+.tab:nth-child(3) {
+  background: #4a62ff;
+}
+
+.tab:nth-child(4) {
+  background: #498bfa;
+}
+
+.tab:nth-child(5) {
+  background: #4aa1f4;
+}
+
+.tab:nth-child(6) {
+  background: #48bff5;
+}
+
+.tab:nth-child(7) {
+  background: #4bd9ee;
+}
+
+.tab:last-child {
+  background: #4cdad3;
+}
+
+.checklist::before {
+  position: absolute;
+  content: '';
+  background: #4aa3f6;
+  top: -25px;
+  left: -25px;
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+
+@media (width <= 760px) {
+
+    .container {
+        flex-direction: column;
+    }
+
+    .options {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+@media (width <= 500px) {
+
+  .container {
+    min-width: 95%;
+    margin: 0 1em;
+  }
+
+  .tracker {
+    width: 100%;
+  }
+
+  .tracker p {
+    font-size: .75rem;
+  }
+
+  .checklist label p {
+    font-size: .8rem;
+  }
+
+  .checklist::before {
+    top: -15px;
+  }
+
+}
+
+@media (width <= 380px) {
+  .options {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
