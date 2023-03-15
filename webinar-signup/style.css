@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #ffffff;
+  font-family: 'Rubik', sans-serif;
+  min-height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  height: 100%;
+}
+
+.webinar-signup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  background: #232631;
+}
+
+.webinar-signup .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5em;
+  width: 60%;
+  margin-right: 75px;
+  margin-top: 50px;
+  padding: 1.5em;
+}
+
+.content .heading {
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+}
+
+.heading h1 {
+  font-size: 1.75rem;
+}
+
+.heading p:first-child {
+  font-size: .75rem;
+}
+
+.heading p {
+  color: #787a80;
+  font-style: .8rem;
+}
+
+.content h2 {
+  font-size: 1.2rem;
+}
+
+.content .form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .75em;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+}
+
+.form-control p {
+  font-size: .85rem;
+}
+
+.form-control input {
+  font-family: inherit;
+  color: #787a80;
+  background: #232631;
+  padding: .75em;
+  border: 2px solid #2b2e39;
+}
+
+.textarea {
+  grid-column: 1 / -1;
+  height: 100px;
+}
+
+.textarea textarea {
+  background: #232631;
+  border: 2px solid #2b2e39;
+}
+
+.future-emails {
+  display: flex;
+  align-items: center;
+  gap: .75em;
+  grid-column: 1 / -1;
+}
+
+.future-emails input {
+  background: #232631;
+}
+
+.content button {
+  font-weight: 600;
+  font-family: inherit;
+  color: #333;
+  padding: 1.25em 1.5em;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.webinar-attenders {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  background: #2b2e39;
+}
+
+.attenders {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  margin-left: 30px;
+  margin-top: 100px;
+}
+
+.share {
+  display: flex;
+  flex-direction: column;
+  gap: .75em;
+}
+
+.share .icons {
+  display: flex;
+  gap: 1em;
+}
+
+.guests {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-top: 50px;
+}
+
+.guest {
+  display: flex;
+  gap: .5em;
+}
+
+.guest img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.guest .info {
+  display: flex;
+  flex-direction: column;
+  gap: .25em;
+}
+
+.info p {
+  font-size: .85rem;
+}
+
+.host {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.share p {
+    font-size: 1.2rem;
+}
+
+.icons i {
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.icons i:hover {
+    color: #4267B2;
+}
+
+.icons i:nth-child(2):hover {
+    color: #1d9bf0;
+}
+
+input:focus-visible {
+    outline: none;
+}
+
+
+@media (width <= 800px) {
+
+    .webinar-signup .content {
+        margin-top: 50px;
+        margin-right: 100px;
+    }
+
+    .heading h1 {
+        font-size: 1.5rem;
+    }
+
+    .heading p {
+        font-size: .85rem;
+    }
+
+    .form-control input {
+        font-size: .8rem;
+    }
+
+    .webinar-attenders {
+        justify-content: flex-start;
+    }
+
+    .webinar-attenders .attenders {
+        margin-top: 50px;
+    }
+}
+
+@media (width <= 650px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .webinar-signup {
+        align-items: center;
+        padding: 1.5em;
+    }
+
+    .webinar-signup .content {
+      width: 80%;
+      margin-right: 0;
+    }
+
+    .content .form {
+      grid-template-columns: 1fr;
+    }
+
+    .webinar-attenders {
+        flex-direction: row;
+        align-items: center;
+        padding: 1.5em;
+    }
+
+    .webinar-attenders .attenders {
+        display: grid;
+        grid-template-areas: "share guest"
+                             "host guest";
+        margin: 0 auto;
+    }
+
+    .guests {
+      grid-area: guest;
+    }
+
+    .share {
+      grid-area: share;
+    }
+
+    .host {
+      grid-area: host;
+    }
+
+    .guests {
+        margin-top: 0;
+    }
+
+    .guest img {
+        height: 35px;
+        width: 35px;
+    }
+
+    .guest p {
+        font-size: .8rem;
+    }
+
+}
