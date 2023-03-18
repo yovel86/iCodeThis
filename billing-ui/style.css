@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  color: #333;
+  font-family: 'Rubik', sans-serif;
+  min-height: 100vh;
+  background: #e8e9fd;
+}
+
+.container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 230px 1fr 250px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0 0 0 / 0.5);
+  margin: 2em auto;
+}
+
+.menu {
+  background: #f8f9ff;
+  border-radius: inherit;
+}
+
+.menu .content {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding: 1.5em;
+  height: 100%;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: .75em;
+  margin: auto;
+}
+
+.user img {
+  width: 50px;
+  height: 50px;
+  border-radius: 20px;
+}
+
+.user .info {
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+}
+
+.info h3 {
+  color: #333;
+  font-size: 1rem;
+}
+
+.info p {
+  color: #a6a5ad;
+  font-size: .8rem;
+  font-weight: 400;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.tab {
+  position: relative;
+  display: flex;
+  gap: .75em;
+  align-items: center;
+  color: #a6a5ad;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.tab span {
+  font-size: 1.4rem;
+}
+
+.tab:last-child {
+  margin-top: auto;
+}
+
+.tab:hover {
+  color: #333;
+}
+
+.tab::before {
+  position: absolute;
+  content: '';
+  width: 3px;
+  height: 0;
+  background: #ee4e39;
+  top: -2px;
+  left: -10px;
+  transition: all .3s;
+  transform-origin: left;
+}
+
+.tab:hover:before {
+   height: 120%;
+}
+
+.tab.active {
+  color: #1c1b4c;
+}
+
+.tab.active::before {
+  position: absolute;
+  content: '';
+  width: 3px;
+  height: 120%;
+  background: #ee4e39;
+  top: -2px;
+  left: -10px;
+}
+
+.main .content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  padding: 2em;
+}
+
+.main .content h1 {
+  font-size: 1.7rem;
+}
+
+.main .content .heading {
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+}
+
+.main .content .heading h2 {
+  font-size: 1.2rem;
+}
+
+.main .content .heading p {
+  font-size: .85rem;
+  color: #a6a5ad;
+}
+
+
+.main .content a {
+  color: #ee4e39;
+  margin-left: 20px;
+}
+
+.main .content h1 {
+  margin-left: 20px;
+}
+
+.main .content .heading {
+  margin-left: 20px;
+}
+
+th {
+  color: #a6a5ad !important;
+  font-size: .9rem;
+  font-weight: 400;
+}
+
+th, td {
+  color: #1c1b4c;
+  text-align: start;
+  padding: 10px 20px;
+  font-weight: 500;
+}
+
+tr {
+  transition: all .3s;
+  cursor: pointer;
+}
+
+tr:not(:first-child):hover {
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0 0 0 / 0.2);
+  transform: scale(1.05);
+}
+
+.payment {
+  display: flex;
+  flex-direction: column;
+  gap: .25em;
+  margin-top: auto;
+  margin-left: 20px;
+}
+
+.payment h2 {
+  font-size: 1.2rem;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-top: 10px;
+}
+
+.card img {
+  width: 40px;
+  height: 15px;
+}
+
+.card button {
+  margin-left: auto;
+}
+
+button {
+  color: #333;
+  background: #fff;
+  font-family: inherit;
+  padding: .5em 1.5em;
+  border-radius: 5px;
+  font-weight: 500;
+  border: 1px solid #a6a5ad;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ee4e39;
+  color: #fff;
+  border: 1px solid #ee4e39;
+}
+
+.plan {
+  position: absolute;
+  top: 100px;
+  right: 20px;
+  animation: drop-plan 1s ease-in-out;
+}
+
+@keyframes drop-plan {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  80% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.plan-card {
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+  color: #fff;
+  padding: 1.5em;
+  background: #ee4e39;
+  border-radius: 20px;
+}
+
+.plan-card button {
+  color: #fff;
+  font-family: inherit;
+  background: #ee4e39;
+  border: 1px solid #fff;
+  padding: .5em 1.5em;
+  border-radius: 5px;
+  transition: all .3s;
+}
+
+.plan-card button:hover {
+  background: #fff;
+  color: #ee4e39;
+  border: 1px solid #ee4e39;
+}
+
+.container::before {
+  position: absolute;
+  content: '';
+  background: #ee4e39;
+  width: 200px;
+  height: 110%;
+  top: -30px;
+  left: -40px;
+  z-index: -1;
+  border-radius: 20px;
+}
+
+
+@media (width <= 800px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .tabs {
+        flex-direction: row;
+    }
+
+    .tab {
+      flex: 1;
+    }
+
+    .tab.active::before {
+        width: 100%;
+        height: 5px;
+        top: 25px;
+        left: 0;
+    }
+
+    .tab::before {
+      width: 0;
+      height: 3px;
+      transform-origin: left;
+    }
+
+    .tab:hover:before {
+        width: 100%;
+        height: 5px;
+        top: 25px;
+        left: 0;
+    }
+
+  .plan {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  th, td {
+    padding: 10px;
+  }
+
+  .plan-card {
+    border-radius: 0 0 10px 10px;
+  }
+
+  .container::before {
+    top: -10px;
+    left: -10px;
+    width: 100%;
+    height: 100%;
+  }
+
+}
+
+@media (width <= 420px) {
+
+  .menu .content {
+    padding: 1rem;
+  }
+
+  .main .content {
+    padding: 1rem;
+  }
+
+  .tab span {
+    font-size: 1.2rem;
+  }
+
+  .tab p {
+    font-size: .8rem;
+  }
+
+  th, td {
+    padding: 10px;
+  }
+
+  .main .content .heading h2 {
+    font-size: 1rem;
+  }
+
+  a {
+    font-size: .85rem;
+  }
+
+  .main .content .heading p {
+    font-size: .75rem;
+    color: #a6a5ad;
+  }
+
+  td {
+    font-size: .8rem;
+  }
+
+  button {
+    font-size: .7rem;
+  }
+
+  .payment h2 {
+    font-size: 1rem;
+  }
+
+  .payment p {
+    font-size: .8rem;
+  }
+
+  .plan-card h2 {
+    font-size: 1rem;
+  }
+
+  .plan-card p {
+    font-size: .8rem;
+  }
+
+}
