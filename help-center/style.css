@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  font-family: 'Rubik', sans-serif;
+  color: #333;
+  background: #eff3ff;
+  min-height: 100vh;
+}
+
+.container {
+  padding: 4em;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0 0 0 / 0.2);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  border: 1px solid #bdbfbe;
+  border-radius: 100px;
+  padding: .75em 1.5em;
+}
+
+.search span {
+  color: #bdbfbe;
+}
+
+.search input {
+  border: none;
+  font-family: inherit;
+  color: #333;
+  padding-left: 10px;
+  width: 400px;
+}
+
+::placeholder {
+  color: #bdbfbe;
+}
+
+.search input:focus-visible {
+  outline: none;
+}
+
+.topics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.topics p {
+  padding: 2em 3.5em;
+  text-align: center;
+  border: 1px solid #bdbfbe44;
+  background: #fff;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.topics p:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 10px rgba(0 0 0 / 0.25);
+}
+
+.topics p:first-child {
+  border-left: none;
+  border-top: none;
+}
+
+.topics p:nth-child(2) {
+  border-top: none;
+}
+
+.topics p:nth-child(3) {
+  border-top: none;
+  border-right: none;
+}
+
+.topics p:nth-child(4) {
+  border-left: none;
+}
+
+.topics p:nth-child(6) {
+  border-right: none;
+}
+
+.topics p:nth-child(7) {
+  border-left: none;
+}
+
+.topics p:nth-child(9) {
+  border-right: none;
+}
+
+.topics p:nth-child(10) {
+  border-left: none;
+  border-bottom: none;
+}
+
+.topics p:nth-child(11) {
+  border-bottom: none;
+}
+
+.topics p:last-child {
+  border-right: none;
+  border-bottom: none;
+}
+
+@media (width <= 600px) {
+    .topics {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .search input {
+      width: 300px;
+    }
+
+    .topics p:nth-child(odd) {
+        border-right: 1px solid #bdbfbe44;
+        border-left: none;
+    }
+
+    .topics p:nth-child(even) {
+        border-right: none;
+    }
+}
+
+@media (width <= 400px) {
+    .topics {
+        grid-template-columns: 1fr;
+    }
+
+    .search input {
+      width: 200px;
+    }
+
+    .topics p {
+        border-right: none !important;
+        border-left: none !important;
+    }
+
+    .topics p:first-child {
+        border-top: none !important;
+    }
+
+    .topics p:last-child {
+        border-bottom: none !important;
+    }
+}
