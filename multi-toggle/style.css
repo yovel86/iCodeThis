@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  font-family: 'Rubik', sans-serif;
+  color: #fff;
+  min-height: 100vh;
+  background: #24252d;
+}
+
+.container {
+  position: relative;
+  background: #1d1e26;
+  border-radius: 10px;
+  padding: 2em;
+}
+
+.container::before,
+.container::after {
+  position: absolute;
+  content: '';
+  inset: -5px;
+  /* background: linear-gradient(var(--angle), #c64162 0 25%, transparent 25% 75%, #d7d1d1); */
+  background: linear-gradient(var(--angle), #c64162, transparent, #d7d1d1, transparent, #d7d1d1, transparent, #c64162, transparent);
+  /* background: conic-gradient(from var(--angle), #c64162, #d7d1d1); */
+  border-radius: inherit;
+  z-index: -1;
+  animation: rotate-angle 10s linear infinite;
+}
+
+.container::before {
+  filter: blur(10px);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+}
+
+.content > p {
+  width: 40ch;
+  color: #3e4149;
+  text-align: center;
+  margin-top: -18px;
+}
+
+.interests {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5em;
+  isolation: isolate;
+}
+
+.interest {
+  position: relative;
+  text-align: center;
+  color: #3e4149;
+  background: #17181f;
+  padding: 1em 2em;
+  border-radius: 5px;
+  transition: all .3s;
+  cursor: pointer;
+  -webkit-tap-highlight-color: #ffffff00;
+  z-index: 1;
+}
+
+.interest.selected {
+  color: #fff;
+  border: 3px solid #c64162;
+  box-shadow: 0 0 0 4px #c6416271;
+}
+
+.interest:hover {
+  color: #fff;
+  box-shadow: 0 0 0 4px #c6416271;
+}
+
+.actions {
+  display: flex;
+  gap: 2em;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  transition: all .3s;
+  -webkit-tap-highlight-color: #ffffff00;
+}
+
+.skip-btn {
+  color: #777c8b;
+  background: #1d1e26;
+  padding: .75em 1.75em;
+  border: 1px solid #17181f;
+  border-radius: 5px;
+}
+
+.skip-btn:hover {
+  color: #17181f;
+  background: #fff;
+  border: 1px solid #fff;
+  box-shadow: 0 0 3px #fff;
+}
+
+.save-btn {
+  color: #fff;
+  background: #c64162;
+  padding: .75em 1.75em;
+  border: 1px solid #c64162;
+  border-radius: 5px;
+}
+
+.save-btn:hover {
+  box-shadow: 0 0 5px #c64162;
+}
+
+.close {
+  display: grid;
+  place-content: center;
+  color: #3e4149;
+  background: #17181f;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.close span {
+  font-size: 1.25rem;
+}
+
+.close:hover {
+  color: #fff;
+  background: #c64162;
+}
+
+@media (width <= 700px) {
+  .interests {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .interest {
+    font-size: .85rem;
+  }
+}
+
+@media (width <= 450px) {
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  .content > p {
+    width: 100%;
+    font-size: .8rem;
+  }
+
+  .interests {
+    grid-template-columns: 1fr;
+  }
+
+  .interest {
+    width: 80vw;
+  }
+
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+} 
+
+@keyframes rotate-angle {
+  0% { --angle: 0deg }
+  100% { --angle: 360deg }
+}
