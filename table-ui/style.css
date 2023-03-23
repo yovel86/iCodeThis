@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  font-family: 'Rubik', sans-serif;
+  color: #888d95;
+  background: #f8f9fd;
+  min-height: 100vh;
+}
+
+.container {
+  background: #f0f3fd;
+  padding: 2em;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+.entries {
+  display: flex;
+  align-items: center;
+  gap: .25em;
+}
+
+select:focus-visible {
+  outline: none;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  background: #f8f9fd;
+  border: 1px solid #888d95;
+  padding: .25em .5em;
+  border-radius: 5px;
+  margin-left: auto;
+}
+
+.search span {
+  font-size: 1.5rem;
+}
+
+.search input {
+  font-family: inherit;
+  border: none;
+}
+
+.search input:focus-visible {
+  outline: none;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  gap: .25em;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+thead tr {
+  background: transparent;
+  border-spacing: 0 0;
+}
+
+tr:not(thead tr) {
+  background: #f8f9fd;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+tr:not(thead tr):hover {
+  transform: scale(1.05);
+}
+
+tr th {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: .9rem;
+  padding: 0 1em;
+}
+
+tr td {
+  color: #333;
+  font-size: .8rem;
+  padding: 1em;
+}
+
+td button {
+  background: #f8f9fd;
+  color: #6982e5;
+  border: 1px solid #6982e5;
+  padding: .4em .35em;
+  border-radius: 5px;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+td button:hover {
+  background: #6982e5;
+  color: #f0f3fd;
+}
+
+.next-prev-action {
+  margin-left: auto;
+}
+
+.next-prev-action {
+  display: flex;
+  align-items: center;
+  gap: .5em;
+  color: #333;
+}
+
+.prev, .next {
+  display: flex;
+  align-items: center;
+  background: #f0f3fd;
+  border: 1px solid #888d95;
+  font-size: .85rem;
+  padding: .25em .5em;
+  border-radius: 5px;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.prev:hover, .next:hover {
+  color: #f0f3fd;
+  background: #333;
+}
+
+.prev span, .next span {
+  font-size: 1.2rem;
+}
