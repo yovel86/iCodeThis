@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  font-family: 'Rubil', sans-serif;
+  background: #1a193b;
+  min-height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  border-radius: 10px;
+  box-shadow: 0 0px 10px #1a193b;
+  animation: animate-container 1s;
+}
+
+.course {
+  padding: 1em;
+  background: #ededfd;
+  border-radius: 10px 0 0 10px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+}
+
+.card .info {
+  display: flex;
+  align-items: flex-start;
+}
+
+.card .info p {
+  color: #58638d;
+  font-size: .75rem;
+}
+
+.card .info span {
+  color: #2d2b4e;
+  margin-left: auto;
+  font-weight: 600;
+}
+
+.card img {
+  width: 220px;
+  height: 120px;
+  border-radius: 5px;
+}
+
+.payment {
+  padding: 2em 3em;
+  background: #2d2b4e;
+  border-radius: 0 10px 10px 0;
+}
+
+.payment .content {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.payment .content h3 {
+  color: #fff;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.form input {
+  font-family: inherit;
+  color: #fff;
+  background: #2d2b4e;
+  border: none;
+  padding: .5em .75em;
+  border-bottom: 2px solid #7974ab;
+  caret-color: #7974ab;
+}
+
+.form input:focus-visible {
+  outline: none;
+}
+
+::placeholder {
+  font-family: inherit;
+  color: #7974ab;
+  padding-left: 5px;
+}
+
+.card-number {
+  position: relative;
+  background: #2d2b4e;
+  border-bottom: 2px solid #7974ab;
+}
+
+.card-number input {
+  border-bottom: none;
+}
+
+.card-number span {
+  position: absolute;
+  top: 2px;
+  right: 10px;
+  font-size: 1.3rem;
+  color: #7974ab;
+}
+
+.card-details {
+  display: flex;
+  align-items: flex-end;
+  gap: .75em;
+}
+
+.card-details .save-card {
+  display: flex;
+  gap: .5em;
+  align-items: center;
+}
+
+.save-card p {
+  color: #fff;
+}
+
+.save-card input {
+  width: 15px;
+  height: 15px;
+  appearance: none;
+  border: 2px solid #7974ab;
+  padding: 2px;
+}
+
+.save-card input:checked {
+  background: #fff;
+}
+
+.meta {
+  align-self: center;
+  color: #7974ab;
+  font-size: .75rem;
+}
+
+.payment button {
+  font-family: inherit;
+  text-transform: uppercase;
+  color: #fff;
+  background: #46b2ff;
+  border: none;
+  border-radius: 5px;
+  padding: .75em 0;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.payment button:hover {
+  box-shadow: 0 0 5px #46b2ff;
+}
+
+.paypal {
+  display: flex;
+  flex-direction: column;
+  gap: .75em;
+  align-self: center;
+  align-items: center;
+}
+
+.paypal p {
+  font-size: .8rem;
+  color: #fff;
+}
+
+.paypal img {
+  width: 80px;
+  height: 40px;
+}
+
+.cart {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 1em;
+  margin-left: auto;
+  margin-right: 3em;
+  transition: all .3s;
+  cursor: pointer;
+  -webkit-tap-highlight-color: #ffffff00;
+}
+
+.cart:hover {
+  scale: 1.2;
+}
+
+.hide {
+  display: none;
+}
+
+@keyframes animate-container {
+  0% {
+    scale: 0;
+    rotate: 0deg;
+  }
+
+  100% {
+    scale: 1;
+    rotate: 720deg;
+  }
+}
