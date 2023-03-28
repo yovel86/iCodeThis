@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  font-family: 'Rubik', sans-serif;
+  background: #f5f3ff;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  gap: 2em;
+}
+
+.free {
+  width: 320px;
+  color: #212843;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0 0 0 / .25);
+}
+
+.pro {
+  width: 320px;
+  color: #ffffff;
+  background: #212843;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0 0 0 / .25);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1.5em 4em;
+  height: 100%;
+}
+
+.content button {
+  margin-top: auto;
+}
+
+.heading {
+  animation: down .75s;
+}
+
+.heading p {
+  color: #909194;
+}
+
+.price {
+  opacity: 0;
+  font-size: 2.75rem;
+  font-weight: 600;
+  animation: expand .75s .75s forwards;
+}
+
+.perks {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin: 2em auto;
+}
+
+.perk {
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  gap: .5em;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.free .perk:first-child {
+  animation: down .75s 1.4s forwards;
+}
+.free .perk:nth-child(2) {
+  animation: down .75s 2s forwards;
+}
+.free .perk:last-child {
+  animation: down .75s 2.5s forwards; 
+}
+
+.pro .perk:first-child {
+  animation: down .75s 1.4s forwards;
+}
+.pro .perk:nth-child(2) {
+  animation: down .75s 2s forwards;
+}
+.pro .perk:nth-child(3) {
+  animation: down .75s 2.5s forwards; 
+}
+.pro .perk:nth-child(4) {
+  animation: down .75s 3s forwards; 
+}
+.pro .perk:last-child {
+  animation: down .75s 3.5s forwards; 
+}
+
+.perk:hover {
+  gap: 1em;
+}
+
+.icon {
+  display: grid;
+  place-content: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; 
+}
+
+.free .icon {
+  color: #ffffff;
+  background: #212843;
+}
+
+.pro .icon {
+  color: #212843;
+  background: #ffffff;
+}
+
+.icon span {
+  font-size: 1rem;
+}
+
+.perk p {
+  font-size: .85rem;
+}
+
+button {
+  opacity: 0;
+  font-family: inherit;
+  padding: 1em 0;
+  border-radius: 100px;
+  border: none;
+  animation: expand .75s 3.75s forwards;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.free button {
+  background: #212843;
+  color: #ffffff;
+}
+
+.free button:hover {
+  box-shadow: 0 0 7.5px #212843;
+}
+
+.pro button {
+  background: #ffffff;
+  color: #212843;
+}
+
+.pro button:hover {
+  box-shadow: 0 0 7.5px #ffffff;
+}
+
+@keyframes down {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes expand {
+  0% {
+    opacity: 0;
+    scale: 0;
+  }
+
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
