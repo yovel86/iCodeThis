@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  font-family: 'Rubik', sans-serif;
+  color: #333;
+  background: #f6f5f8;
+  min-height: 100vh;
+}
+
+.heading {
+  text-align: center;
+  margin-top: 12em;
+  margin-bottom: 2em;
+}
+
+.heading p {
+  width: 40ch;
+  margin: 10px auto;
+}
+
+.timeline {
+  position: relative;
+  width: 900px;
+}
+
+.card-container {
+  position: relative;
+  width: 50%;
+  padding: 1em;
+}
+
+.left {
+  left: -2%;
+}
+
+.right {
+  left: 52%;
+}
+
+.dot {
+  position: absolute;
+  top: 30px;
+  right: -37px;
+  color: #878892;
+  font-size: 5rem;
+}
+
+.right .dot {
+  left: -30px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1em;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0 0 0 / .25);
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.card:hover {
+    scale: 1.05;
+}
+
+.card .top-row {
+  display: flex;
+  align-items: center;
+}
+
+.top-row p:first-child {
+  color: #7c8182;
+  font-size: .85rem;
+  font-weight: 500;
+}
+
+.top-row .topic {
+  background: #e9f4ec;
+  margin-left: auto;
+  padding: 5px;
+  font-weight: 500;
+}
+
+.content {
+  width: 20ch;
+}
+
+.card .more {
+  display: flex;
+  align-items: center;
+  gap: .5em;
+  font-weight: 500;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  background: #878892;
+  top: 0;
+  left: 50%;
+  margin-left: 1px;
+  z-index: -1;
+}
+
+.left-arrow {
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid #fff;
+  right: 2px;
+}
+
+.right-arrow {
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid #fff;
+  left: 2px;
+}
+
+.left .top-row .topic {
+  margin-left: 0;
+  color: #333;
+}
+
+.left .top-row span {
+  margin-left: auto;
+}
+
+.left .content {
+  text-align:end;
+  align-self: flex-end;
+}
+
+.left .more {
+  align-self: flex-end;
+}
+
+.blog {
+  background: #fff2f1 !important;
+}
+
+.app {
+  background: #fbf4e5 !important; 
+}
+
+.twitter {
+  background: #eafeff !important;
+}
