@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  font-family: 'Rubik', sans-serif;
+  background: #f0f3fb;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 1em;
+  width: 80vw;
+  max-width: 900px;
+  border-radius: 3px;
+  box-shadow: 0 5px 10px rgba(0 0 0 / .25);
+  transition: all .3s;
+  cursor: pointer;
+  -webkit-tap-highlight-color: #ffffff00;
+}
+
+.info:hover {
+  scale: 1.05;
+}
+
+.info p {
+  font-size: .8rem;
+}
+
+.light {
+  background: #fff;
+}
+
+.icon {
+  display: grid;
+  place-content: center;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.icon span {
+  font-size: 1rem;
+}
+
+.light .icon {
+  background: #08c32d;
+}
+
+.light .icon span {
+  color: #fff;
+}
+
+.close {
+  color: #bab6dd;
+  font-size: 1.2rem;
+  margin-left: auto;
+  transition: all .3s;
+}
+
+.close:hover {
+  color: red;
+}
+
+.dark {
+  color: #fff;
+  background: #151727;
+}
+
+.dark .icon {
+  background: #fff;
+}
+
+.dark .icon span {
+  color: #08c32d;
+}
+
+.border-round {
+  border-radius: 100px;
+}
+
+.remove-btn {
+  color: #fff;
+  background: #08c32d;
+  padding: .75em 1.5em;
+  border: none;
+  border-radius: 5px;
+  font-size: .75rem;
+  font-family: inherit;
+  width: fit-content;
+  align-self: center;
+  box-shadow: 0 0 5px rgba(0 0 0 / .25);
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.remove-btn:hover {
+  box-shadow: 0 0 10px #08c32d;
+}
+
+.toast {
+  display: none;
+  position: relative;
+  justify-content: center;
+  animation: scale .75s;
+}
+
+.toast::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background: #08c32d;
+  animation: toast 4s .75s ease-out;
+}
+
+.show {
+  display: flex;
+}
+
+.hide {
+  display: none;
+}
+
+@keyframes scale {
+  0% {
+    opacity: 0;
+    scale: 0;
+  }
+
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes toast {
+  0% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0;
+  }
+}
+
+@media (width <= 420px) {
+  .info p {
+    font-size: .7rem;
+  }
+}
