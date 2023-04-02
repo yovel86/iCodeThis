@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  font-family: 'Rubik', sans-serif;
+  background: #ffffff;
+  min-height: 100vh;
+}
+
+.top-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 40%;
+  background: #f67455;
+}
+
+.bottom-right {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  right: 0;
+  bottom: 0;
+  width: 30%;
+  height: 50%;
+}
+
+.yellow {
+  background: #ffd055;
+  grid-row: 1 / -1;
+}
+
+.blue {
+  background: #452eba;
+  grid-column: 2 / -1;
+  grid-row: 1 / 5;
+}
+
+.red {
+  background: #f67455;
+  grid-row: 4 / -1;
+  grid-column: 2 / -1;
+}
+
+.container {
+  display: grid;
+  grid-template-areas: "first first first"
+                       "second third third"
+                       "second   .      . ";
+  gap: 1em;
+  max-width: 80vw;
+  margin: 2em;
+}
+
+.first {
+  grid-area: first;
+  display: flex;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  background: #ffffff;
+  z-index: 1;
+}
+
+.first img {
+  width: 300px;
+  height: 100%;
+  border-radius: 10px 0 0 10px;
+}
+
+.first .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1em;
+  gap: 1em;
+}
+
+.first .content .topic {
+  padding: .75em;
+  background: #f7f6fb;
+  width: fit-content;
+  font-weight: 500;
+  font-size: .75rem;
+  margin-bottom: -10px;
+}
+
+.first .content h2 {
+  width: 18ch;
+}
+
+.content .date {
+  color: #a4a3a9;
+  font-size: .75rem;
+  margin-top: -10px;
+}
+
+.first .content p {
+  width: 40ch;
+  padding: 1em 0;
+}
+
+.second {
+  grid-area: second;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  background: #ffffff;
+  z-index: 1;
+  width: 320px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.second img {
+  padding: 10px;
+  width: 100%;
+}
+
+.second .content {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  position: relative;
+  padding: 0 1em;
+  margin-top: -20px;
+}
+
+.second .content h2 {
+  width: 20ch;
+}
+
+.second .content p {
+  padding-bottom: 1em;
+  width: 30ch;
+}
+
+.second .content .topic {
+  position: absolute;
+  top: -50px;
+  left: 20px;
+  background: #fff;
+  padding: .75em;
+  font-size: .75rem;
+  border-radius: 5px;
+}
+
+.third {
+  grid-area: third;
+  display: flex;
+  background: #ffffff;
+  z-index: 1;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.third img {
+  width: 150px;
+  height: 50%;
+  padding: .5em;
+  border-radius: 10px;
+}
+
+.third .content {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1em;
+}
+
+.third .content .topic {
+  padding: .75em;
+  background: #f7f6fb;
+  width: fit-content;
+  font-weight: 500;
+  font-size: .75rem;
+  margin-bottom: -10px;
+}
+
+.third .content h2 {
+  width: 18ch;
+}
+
+.third .content p {
+  width: 30ch;
+}
+
+@media (width <= 750px) {
+  .container {
+    grid-template-areas: "first"
+                         "second"
+                         "third";
+  }
+
+  .second {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .second img {
+    width: 250px;
+    height: 100%;
+  }
+
+  .second .content {
+    margin-top: 0;
+    padding: 1em 0;
+  }
+
+  .second .content .topic {
+    display: none;
+  }
+}
