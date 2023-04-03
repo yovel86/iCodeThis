@@ -1,0 +1,110 @@
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="script.js" defer></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="heading">
+
+      <h2>Where do you want to play?</h2>
+
+      <div class="options">
+
+        <label>
+          <input type="radio" name="city" value="Bergen" checked>
+          <span>Bergen</span>
+        </label>
+
+        <label>
+          <input type="radio" name="city" value="Oslo">
+          <span>Oslo</span>
+        </label>
+    
+      </div>
+
+      <div class="close-icon">
+        <span class="material-icons-outlined">close</span>
+      </div>
+
+    </div>
+
+    <div class="party-size">
+
+      <h3>Choose the party size</h3>
+
+      <div class="sizes">
+
+        <label class="size-card">
+          <input type="radio" name="size" value="2">
+          <div class="icons">
+            <span class="material-icons-outlined">person</span>
+            <span class="material-icons-outlined">person</span>
+          </div>
+          <p>2 people</p>
+        </label>
+  
+        <label class="size-card">
+          <input type="radio" name="size" value="4">
+          <div class="icons">
+            <span class="material-icons-outlined">person</span>
+            <span class="material-icons-outlined">person</span>
+            <span class="material-icons-outlined">person</span>
+            <span class="material-icons-outlined">person</span>
+          </div>
+          <p>4 people</p>
+        </label>
+  
+        <label class="size-card active">
+          <input type="radio" name="size" value="6" checked>
+          <div class="icons">
+            <span class="material-icons-outlined">person</span>
+            <span class="material-icons-outlined">person</span>
+            <span class="material-icons-outlined">person</span>
+            <span class="material-icons-outlined">person</span>
+            <span class="material-icons-outlined">person</span>
+            <span class="material-icons-outlined">person</span>
+          </div>
+          <p>6 people</p>
+        </label>
+
+      </div>
+
+    </div>
+
+    <button>Continue</button>
+
+  </div>
+
+  <div class="success-msg hide">
+
+    <h3>🎉 Party Registered! 🎉</h3>
+
+    <div class="info">
+      <p class="place">
+        Place : <span>Oslo</span>
+      </p>
+  
+      <p class="size">
+        Size : <span>2 people</span>
+      </p>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
