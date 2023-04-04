@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  font-family: 'Rubik', sans-serif;
+  background: #fcf6ed;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+  align-items: center;
+}
+
+.heading h2 {
+  color: #a574f5;
+  font-size: 2.25rem;
+}
+
+.heading p {
+  color: #b5b2aa;
+  font-size: 1.1rem;
+}
+
+.recommend-form {
+  color: #bdc0bf;
+  background: #ffffff;
+  border-radius: 5px;
+  padding: 2em;
+  box-shadow: 0 0 5px rgba(0 0 0 / 0.25);
+  margin: 0 auto;
+}
+
+.recommend-form .content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  gap: .75em;
+}
+
+.form-control p {
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+
+.ratings {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.ratings span {
+  color: #c4c6c7;
+  background: #f7f8fa;
+  padding: .5em .75em;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.ratings span:hover {
+  color: #ffffff;
+  background: #d0cec8;
+}
+
+.ratings span.active {
+  background: #eb8000;
+  color: #ffffff;
+}
+
+.form-control textarea {
+  height: 150px;
+  resize: none;
+  font-family: inherit;
+  padding: 1em;
+  color: #b5b2aa;
+  font-size: 1rem;
+  border: 1px solid #b5b2aa;
+  caret-color: #b5b2aa;
+}
+
+.form-control textarea:focus-visible {
+  outline: none;
+}
+
+::placeholder {
+  color: #b5b2aa;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+button {
+  color: #eb8000;
+  font-size: 1.1rem;
+  background: none;
+  border: none;
+  margin: .75em 0;
+  font-weight: 200;
+  cursor: pointer;
+}
+
+.hide {
+  display: none !important;
+}
+
+.thanks-msg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5em;
+  color: #bdc0bf;
+  background: #ffffff;
+  padding: 1.5em;
+  border-radius: 5px;
+}
+
+.thanks-msg p:first-child {
+  font-size: 1.25rem;
+}
+
+@media (width <= 700px) {
+  
+  .container {
+    width: 80vw;
+  }
+
+}
+
+
+
+
