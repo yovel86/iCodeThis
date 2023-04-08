@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  font-family: 'Rubik', sans-serif;
+  color: #333;
+  background: radial-gradient(at 60% 50%, #d1f9f2 25%, #f3f9ff 50%);
+  min-height: 100vh;
+}
+
+.container {
+  width: 80vw;
+  max-width: 1000px;
+  padding: 1em;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  padding: 2em;
+  text-transform: uppercase;
+  background: #f9faff;
+  border-radius: inherit;
+}
+
+.content .topics {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.topics div {
+  position: relative;
+}
+
+.topics div span {
+  padding: .5em 1em;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.topics div span:hover {
+  background: #ededf5;
+}
+
+.sub-menu {
+  top: 100px;
+  left: 0;
+  position: absolute;
+  background: #ffffff;
+  padding: 1em;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .5em;
+  box-shadow: 0 0 5px rgba(0 0 0 / .2);
+}
+
+.sub-menu div {
+  display: flex;
+  flex-direction: column;
+  gap: .75em;
+}
+
+.sub-menu div h2 {
+  font-size: .85rem;
+}
+
+.sub-menu div p {
+  font-size: .8rem;
+}
+
+.content .login {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-left: auto;
+}
+
+.login div {
+  cursor: pointer;
+}
+
+.login div:nth-child(2) {
+  padding: .5em 1em;
+  color: #ffffff;
+  background: #0F1034;
+  border-radius: 5px;
+}
+
+.hide {
+  display: none;
+}
+
