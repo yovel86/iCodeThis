@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  font-family: 'Rubik', sans-serif;
+  background: #eeecea;
+  min-height: 100vh;
+}
+
+.container {
+  position: relative;
+  padding: 2em;
+  background: #ffffff;
+  box-shadow: 0 0 15px #a7c4e3;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
+
+.bg {
+  position: absolute;
+  width: 150%;
+  height: 200px;
+  top: -105px;
+  left: -90px;
+  background: #a7c4e3;
+  z-index: -1;
+  border-radius: 70%;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 3em;
+  color: #ffffff;
+}
+
+.heading .left-icon span {
+  font-size: 2rem;
+}
+
+.heading .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .25em;
+}
+
+.title h4 {
+  font-size: 1.1rem;
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  cursor: pointer;
+}
+
+.task p {
+  color: #333;
+  font-weight: 500;
+}
+
+.task .icon {
+  color: #5aeba8;
+  font-size: 1.8rem;
+  margin-left: auto;
+}
+
+.not-checked {
+  width: 25px;
+  height: 25px;
+  border: 3px solid #dde2e2;
+  border-radius: 50%;
+  margin-left: auto;
+}
+
+.cancel {
+  color: #89a4a4 !important;
+  text-decoration: line-through;
+}
+
+.add-icon {
+  display: grid;
+  place-content: center;
+  background: #9ac4f3;
+  padding: .85em;
+  align-self: flex-end;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all .3s;
+  box-shadow: 0 0 10px rgba(0 0 0 / .25);
+}
+
+.add-icon:hover {
+  box-shadow: 0 0 20px 5px #9ac4f3;
+}
+
+.add-icon span {
+  color: #ffffff;
+  font-size: 2rem;
+}
+
+.hide {
+  display: none !important;
+}
+
+.overlay {
+  position: absolute;
+  background: rgba(0 0 0 / .35);
+  inset: 0;
+  pointer-events:none;
+  z-index: 10;
+}
+
+.add-task {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  width: 350px;
+  padding: 3em 2em;
+  border-radius: 10px;
+  z-index: 12;
+  animation: scale-up .5s;
+}
+
+.add-task input {
+  font-size: 1rem;
+  font-family: inherit;
+  width: 90%;
+  padding: .5em;
+  border: 1px solid #89a4a4;
+  border-radius: 10px;
+}
+
+.add-task input:focus-visible {
+  outline: 1px solid #9ac4f3;
+}
+
+.add-task button {
+  color: #ffffff;
+  font-family: inherit;
+  background: #70a1d9;
+  padding: .75em 2em;
+  border: none;
+  border-radius: 10px;
+  transition: all .3s;
+  cursor: pointer;
+  -webkit-tap-highlight-color: #ffffff00;
+}
+
+.add-task button:hover {
+  background: #4686d0;
+}
+
+@keyframes scale-up {
+  0% {
+    opacity: 0;
+    scale: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
