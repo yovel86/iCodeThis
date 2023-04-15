@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  font-family: 'Rubik', sans-serif;
+  background: #f8f9fd;
+  min-height: 100vh;
+}
+
+.container {
+  width: 80vw;
+  max-width: 1000px;
+  padding: 4em;
+  background: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0 0 0 / .25);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
+
+.content h1 {
+  color: #182026;
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .5em;
+  color: #8b8b96;
+}
+
+.breadcrumb > p {
+  cursor: pointer;
+  -webkit-tap-highlight-color: #ffffff00;
+  transition: all .3s;
+}
+
+.breadcrumb p:hover {
+  color: #182026;
+}
+
+.breadcrumb p:last-child {
+  color: #182026;
+  font-weight: 500;
+}
+
+.breadcrumb.border {
+  padding: 1em 0;
+  border-top: 1px solid #d6d5e1;
+  border-bottom: 1px solid #d6d5e1;
+}
+
+.breadcrumb.border span {
+  color: #4275fa;
+}
+
+.breadcrumb.border span:first-child {
+  font-size: 2rem;
+  margin-right: .5em;
+}
+
+.breadcrumb.borderless {
+  color: #4275fa;
+}
+
+@media (width <= 520px) {
+  .container {
+    padding: 2em;
+  }
+}
