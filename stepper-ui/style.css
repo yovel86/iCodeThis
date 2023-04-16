@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  font-family: 'Rubik', sans-serif;
+  background: #7b90fd;
+  min-height: 100vh;
+}
+
+.container {
+  width: 80vw;
+  max-width: 600px;
+  padding: 3em;
+  color: #47456c;
+  background: #edf0f8;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0 0 0 / .25);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .75em;
+}
+
+.content p {
+  text-align: center;
+}
+
+.content button {
+  color: #edf0f8;
+  background: #7b90fd;
+  font-family: inherit;
+  padding: .8em 3.5em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all .3s;
+  -webkit-tap-highlight-color: #ffffff00;
+}
+
+.content button:hover {
+  box-shadow: 0 0 10px #7b90fd;
+}
+
+.stepper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+  margin-bottom: 1em;
+  isolation: isolate;
+}
+
+.stepper div {
+  display: grid;
+  place-content: center;
+  background: #edf0f8;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0 0 0 / .2);
+  cursor: pointer;
+  transition: all .3s;
+  -webkit-tap-highlight-color: #ffffff00;
+}
+
+.stepper div.active {
+  color: #edf0f8;
+  background: #7b90fd;
+}
+
+.stepper::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #d7dce8;
+  z-index: -1;
+}
+
+.stepper .progress {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #d7dce8;
+  z-index: -1;
+  transition: all .3s;
+}
