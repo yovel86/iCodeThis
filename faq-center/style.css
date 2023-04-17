@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  font-family: 'Rubik', sans-serif;
+  color: #3a4254;
+  background: #f6f8fc;
+  min-height: 100vh;
+}
+
+.container {
+  width: 80vw;
+  max-width: 800px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  margin: 2em 3em;
+}
+
+.content label {
+  display: flex;
+  align-items: center;
+  gap: .5em;
+  padding: .7em;
+  width: 80%;
+  background: #ffffff;
+  margin: 2em 0;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}
+
+.content label input {
+  appearance: none;
+  border: none;
+  font-family: inherit;
+}
+
+.content label input:focus-visible {
+  outline: none;
+}
+
+.content label span {
+  color: #95989f;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  color: #7e7e8b;
+  gap: 1em;
+  width: 80%;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding-bottom: 10px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: #ffffff00;
+  transition: all .3s;
+}
+
+.accordion .item:not(:last-child) {
+  border-bottom: 3px solid #ecedf3;
+}
+
+.item .topic {
+  display: flex;
+  align-items: center;
+}
+
+.topic h4 {
+  font-weight: 400;
+}
+
+.topic span {
+  margin-left: auto;
+}
+
+.item > p {
+  max-height: 0;
+  overflow: hidden;
+  transition: all .3s;
+} 
+
+.item.active > p {
+  max-height: 200px;
+}
+
+.image-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card img {
+  width: 200px;
+  border-radius: 10px 10px 0 0;
+}
+
+.card p {
+  padding: 5px 0;
+  text-align: center;
+}
+
+@media (width <= 520px) {
+
+  .container {
+    width: 95vw;
+  }
+
+  .content {
+    margin: 1em;
+  }
+
+  .image-container {
+    justify-content: center;
+  }
+
+  .card img {
+    width: 60vw;
+  }
+}
+
