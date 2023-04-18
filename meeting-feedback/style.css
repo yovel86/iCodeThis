@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  color: #f8f8fc;
+  font-family: 'Rubik', sans-serif;
+  background: linear-gradient(to right, #c9ccf2, #d9c8f7);
+  min-height: 100vh;
+}
+
+.container {
+  position: relative;
+  width: 90vw;
+  max-width: 600px;
+  padding: 3em 4em;
+  background: #1a1832;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #1a1832;
+}
+
+.container > .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.rating {
+  background: #282548;
+  padding: 1.5em 4em;
+  border-radius: 5px;
+}
+
+.rating .content {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.rating .content > p {
+  align-self: center;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.stars span {
+  font-size: 3rem;
+  color: #f3db68;
+  cursor: pointer;
+  -webkit-tap-highlight-color: #ffffff00;
+  transition: all .3s;
+}
+
+.stars span.selected {
+  text-shadow: 0 0 5px #f3db68;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  color: #68648e;
+}
+
+.meta p:last-child {
+  margin-left: auto;
+}
+
+.home-button {
+  padding: 1em 2.5em;
+  color: #f8f8fc;
+  font-family: inherit;
+  border-radius: 5px;
+  border: none;
+  background: linear-gradient(to bottom right, #682cb9 50%, #6417ae 50%);
+  cursor: pointer;
+  -webkit-tap-highlight-color: #ffffff00;
+  transition: all .3s;
+}
+
+.home-button:hover {
+  box-shadow: 0 0 10px #6417ae;
+}
+
+#join-again {
+  color: #68648e;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.8rem;
+  color: #68648e;
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.close:hover {
+  background: #282548;
+}
+
+@media (width <= 520px) {
+  .rating {
+    padding: 1.5em 3em;
+  }
+  .stars span {
+    font-size: 2.3rem;
+  }
+}
+
+@media (width <= 450px) {
+
+  .stars span {
+    font-size: 1.5rem;
+  }
+}
