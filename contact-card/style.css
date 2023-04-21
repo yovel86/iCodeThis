@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  font-family: 'Rubik', sans-serif;
+  background: #f4f7ff;
+  min-height: 100vh;
+}
+
+.container {
+  padding: 5em;
+  background: #ffffff;
+  border-radius: 10px;
+  width: 90vw;
+  max-width: 500px;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  padding: 2em;
+  color: #ffffff;
+  padding-bottom: 6em;
+  background: linear-gradient(to bottom right, #60a0fe, #926fe6);
+  border-radius: 10px;
+}
+
+.heading p {
+  text-align: center;
+}
+
+img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  gap: 1.5em;
+  padding: 2em;
+  color: #2e2c37;
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(0 0 0 / .25);
+  border-radius: 10px;
+  margin-top: -80px;
+  margin-left: 50px;
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+  align-items: center;
+}
+
+.user .active {
+  display: flex;
+  align-items: center;
+  gap: .25em;
+  color: #aba9c2;
+}
+
+.active span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #8fd938;
+}
+
+.active p {
+  font-size: .8rem;
+}
+
+button {
+  color: #ffffff;
+  font-family: inherit;
+  padding: .75em 2em;
+  border: none;
+  background: linear-gradient(to bottom right, #60a0fe, #926fe6);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+button:hover {
+  box-shadow: 0 0 10px #60a0fe;
+}
+
+@media (width <= 500px) {
+
+  .container {
+    padding: 2em;
+  }
+
+  .profile {
+    margin: -80px auto;
+  }
+}
