@@ -1,0 +1,133 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  font-family: 'Poppins', sans-serif;
+  background: #f5f3fd;
+  min-height: 100vh;
+}
+
+.container {
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0 0 0 / .25);
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  color: #ffffff;
+  background: linear-gradient(to bottom right, #b78fe8, #715cd1);
+  padding: 2em;
+  border-radius: 5px;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  gap: .75em;
+  max-width: 250px;
+}
+
+.icon {
+  display: grid;
+  place-content: center;
+  width: 28px;
+  height: 28px;
+  background: #c2a6ed;
+  border-radius: 50%;
+}
+
+.icon span {
+  font-size: 1.1rem;
+}
+
+.account {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  padding: 3em;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.control {
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+}
+
+.control input {
+  padding: 1em;
+  border-radius: 5px;
+  font-family: inherit;
+  border: 1px solid #d0cccc;
+  transition: all .3s;
+}
+
+.control input:focus-visible {
+  outline: none;
+  box-shadow: 0 0 5px #6f5ace inset;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: .5em;
+  color: #828587;
+  cursor: pointer;
+  -webkit-tap-highlight-color: #ffffff00;
+}
+
+.check input {
+  width: 15px;
+  height: 15px;
+  border: 1px solid #828587;
+  border-radius: 5px;
+}
+
+.account > button {
+  padding: 1em;
+  color: #ffffff;
+  background: #6f5ace;
+  font-family: inherit;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: #ffffff00;
+  transition: all .3s;
+}
+
+.account > button:hover {
+  box-shadow: 0 0 10px #715cd1;
+}
+
+@media (width <= 600px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .account {
+      grid-row: 1;
+  }
+}
