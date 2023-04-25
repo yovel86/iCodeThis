@@ -1,0 +1,262 @@
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="script.js" defer></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h3>A collective list of free APIs for use in software and web development</h3>
+    
+    <label>
+      <span class="material-icons-outlined">search</span>
+      <input type="text" placeholder="Find development, games & images APIs">
+    </label>
+
+    <h4>Featured APIs of this week</h4>
+
+    <div class="grid-api">
+
+      <div class="item">
+        <div class="content">
+          <div class="image">
+            <img src="data:image/png;base64,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">
+          </div>
+          <div class="details">
+            <div class="title">
+              <h3>Hunter</h3>
+              <span>Data access</span>
+            </div>
+            <p>Hunter API makes it easy to find or verify professional email addresses</p>
+          </div>
+        </div>
+        <div class="meta hide">
+          <div class="bookmark">
+            <span class="material-icons-outlined">bookmark_border</span>
+            <p>Bookmark</p>
+          </div>
+          <div class="docs">
+            <p>API Docs</p>
+            <span class="material-icons-outlined">navigate_next</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="content">
+          <div class="image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO7Hw0M6qvJflAxasTuWbY8Dih0cORwm9uGbrAtcnX8ITSx2ab8_9jnoL3lEApjV_Vf-pGC7YYeAw&usqp=CAU&ec=48600112">
+          </div>
+          <div class="details">
+            <div class="title">
+              <h3>Twilio</h3>
+              <span>Data access</span>
+            </div>
+            <p>Send and receive SMS & MMS messages as well as query meta-data about text messages</p>
+          </div>
+        </div>
+        <div class="meta hide">
+          <div class="bookmark">
+            <span class="material-icons-outlined">bookmark_border</span>
+            <p>Bookmark</p>
+          </div>
+          <div class="docs">
+            <p>API Docs</p>
+            <span class="material-icons-outlined">navigate_next</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="item">
+        <div class="content">
+          <div class="image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/640px-WhatsApp.svg.png">
+          </div>
+          <div class="details">
+            <div class="title">
+              <h3>Whatsapp</h3>
+              <span>Automation</span>
+            </div>
+            <p>Send Promotional, Transactional Messages, Include Images, Video's, etc</p>
+          </div>
+        </div>
+        <div class="meta hide">
+          <div class="bookmark">
+            <span class="material-icons-outlined">bookmark_border</span>
+            <p>Bookmark</p>
+          </div>
+          <div class="docs">
+            <p>API Docs</p>
+            <span class="material-icons-outlined">navigate_next</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="content">
+          <div class="image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtxWXbKuNw1U5AXT70xgxWqMssYW6kJmnKWjmSgydxEBd14VnYXznbUe3pAmpoC9fJxpKuKiNRzqc&usqp=CAU&ec=48600112">
+          </div>
+          <div class="details">
+            <div class="title">
+              <h3>Stripe</h3>
+              <span>Data access</span>
+            </div>
+            <p>A suite of payment APIs that powers commerce for online businesses</p>
+          </div>
+        </div>
+        <div class="meta hide">
+          <div class="bookmark">
+            <span class="material-icons-outlined">bookmark_border</span>
+            <p>Bookmark</p>
+          </div>
+          <div class="docs">
+            <p>API Docs</p>
+            <span class="material-icons-outlined">navigate_next</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="content">
+          <div class="image">
+            <img src="https://cdn-images.himalayas.app/pao93vtb4eb6b7nliytc8ncvoqka">
+          </div>
+          <div class="details">
+            <div class="title">
+              <h3>Typeform</h3>
+              <span>Data access</span>
+            </div>
+            <p>Create, retrive, update and delete your typeforms, themes and images</p>
+          </div>
+        </div>
+        <div class="meta hide">
+          <div class="bookmark">
+            <span class="material-icons-outlined">bookmark_border</span>
+            <p>Bookmark</p>
+          </div>
+          <div class="docs">
+            <p>API Docs</p>
+            <span class="material-icons-outlined">navigate_next</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="content">
+          <div class="image">
+            <img src="https://yt3.googleusercontent.com/ytc/AGIKgqPlxjfG6kc6NDhGlMAJwF_OI20BYEOg1OoZGuhtDw=s900-c-k-c0x00ffffff-no-rj">
+          </div>
+          <div class="details">
+            <div class="title">
+              <h3>BlaBlaCar</h3>
+              <span>Automation</span>
+            </div>
+            <p>Allows to search for carpool trips, etc</p>
+          </div>
+        </div>
+        <div class="meta hide">
+          <div class="bookmark">
+            <span class="material-icons-outlined">bookmark_border</span>
+            <p>Bookmark</p>
+          </div>
+          <div class="docs">
+            <p>API Docs</p>
+            <span class="material-icons-outlined">navigate_next</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="content">
+          <div class="image">
+            <img src="https://cdn.theorg.com/d37b58eb-6a36-4891-beff-4713b56b4f7b_thumb.jpg">
+          </div>
+          <div class="details">
+            <div class="title">
+              <h3>Meterologisk Institutt</h3>
+              <span>Data access</span>
+            </div>
+            <p>Weather and Climate data</p>
+          </div>
+        </div>
+        <div class="meta hide">
+          <div class="bookmark">
+            <span class="material-icons-outlined">bookmark_border</span>
+            <p>Bookmark</p>
+          </div>
+          <div class="docs">
+            <p>API Docs</p>
+            <span class="material-icons-outlined">navigate_next</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="content">
+          <div class="image">
+            <img src="https://zenkit.com/wp-content/uploads/2018/05/Asana-Logo-2.png">
+          </div>
+          <div class="details">
+            <div class="title">
+              <h3>Asana</h3>
+              <span>Data access</span>
+            </div>
+            <p>Customize the experience, leverage your data with the Asana API</p>
+          </div>
+        </div>
+        <div class="meta hide">
+          <div class="bookmark">
+            <span class="material-icons-outlined">bookmark_border</span>
+            <p>Bookmark</p>
+          </div>
+          <div class="docs">
+            <p>API Docs</p>
+            <span class="material-icons-outlined">navigate_next</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="content">
+          <div class="image">
+            <img src="data:image/png;base64,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">
+          </div>
+          <div class="details">
+            <div class="title">
+              <h3>Mailchimp</h3>
+              <span>Automation</span>
+            </div>
+            <p>Email marketing, ads, landing pages and CRM tools to grow your business</p>
+          </div>
+        </div>
+        <div class="meta hide">
+          <div class="bookmark">
+            <span class="material-icons-outlined">bookmark_border</span>
+            <p>Bookmark</p>
+          </div>
+          <div class="docs">
+            <p>API Docs</p>
+            <span class="material-icons-outlined">navigate_next</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>
