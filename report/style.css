@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap'); */
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  font-family: 'Rubik', sans-serif;
+  color: #ffffff;
+  background: #16142d;
+  min-height: 100vh;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  width: 90vw;
+  max-width: 600px;
+  background: #1c1839;
+  border-radius: 10px;
+  padding: 50px;
+  margin: 2em auto;
+}
+
+.checkboxes {
+  display: flex;
+  flex-direction: column;
+  gap: .75em;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  cursor: pointer;
+  -webkit-tap-highlight-color: #ffffff00;
+}
+
+.checkbox input {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  outline: 1px solid #ffffff;
+  outline-offset: 5px;
+  border-radius: 2px;
+  transition: all .3s;
+}
+
+.checkbox input:checked {
+  background: #fe994e;
+  outline: 1px solid #fe994e;
+}
+
+.checkbox .text p {
+  color: #777788;
+  margin-top: 2px;
+}
+
+.extra textarea {
+  width: 300px;
+  height: 150px;
+  border: none;
+  resize: none;
+  color: #ffffff;
+  background: #171433;
+  caret-color: #fe994e;
+  font-family: inherit;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 10px;
+  margin-top: 10px;
+  transition: all .3s;
+}
+
+.extra textarea:focus-visible {
+  outline: 1px solid #fe994e;
+}
+
+::placeholder {
+  font-size: .85rem;
+}
+
+.submit-btn {
+  color: #171433;
+  background: #fe994e;
+  font-family: inherit;
+  border-radius: 5px;
+  border: none;
+  padding: 1em 2.25em;
+  width: fit-content;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.submit-btn:hover {
+  box-shadow: 0 0 10px #fe994e;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: grid;
+  place-content: center;
+  padding: 1em 1em 1.5em 1.5em;
+  background: #211d45;
+  transition: all .3s;
+  cursor: pointer;
+  border-radius: 0 0 0 60px;
+}
+
+.close:hover {
+  background: #fe994e;
+}
+
+.close span {
+  color: #ffffff;
+}
