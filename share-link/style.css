@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap'); */
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  font-family: 'Rubik', sans-serif;
+  color: #f0f6f8;
+  background: #1b1e36;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1.5em;
+  width: 90vw;
+  max-width: fit-content;
+  margin: 2em auto;
+  padding: 2.5em;
+  background: #242547;
+  border-radius: 10px;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.icon {
+  display: grid;
+  place-content: center;
+  width: 40px;
+  height: 40px;
+  background: #30335c;
+  padding: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all .3s;
+  -webkit-tap-highlight-color: #ffffff00;
+}
+
+.icon:hover {
+  background: #ec4c86;
+  box-shadow: 0 5px 15px #ec4c86;
+}
+
+.icon i {
+  font-size: 1.5rem;
+}
+
+.share {
+  display: flex;
+  flex-direction: column;
+  gap: .75em;
+}
+
+
+.share label {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: #1b1e36;
+  border-radius: 5px;
+}
+
+.share label input {
+  background: none;
+  font-family: inherit;
+  color: #f0f6f8;
+  border: none;
+}
+
+.share label input:focus-visible {
+  outline: none;
+}
+
+.share label p {
+  font-size: .65rem;
+  color: #4f5090;
+  cursor: pointer;
+  transition: all .3s;
+  -webkit-tap-highlight-color: #ffffff00;
+}
+
+.share label p:hover {
+  color: #f0f6f8;
+  scale: 1.05;
+}
+
+.hide {
+  display: none;
+}
+
+.alert {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #30335c;
+  padding: .8em 1.8em;
+  border-radius: 10px;
+  width: fit-content;
+  animation: scale .5s;
+}
+
+@keyframes scale {
+  0% {
+    opacity: 0;
+    scale: 0;
+  }
+
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
