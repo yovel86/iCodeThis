@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap'); */
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  background: #f1f5f9;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+  width: 90vw;
+  max-width: 500px;
+  font-family: 'Rubik', sans-serif;
+  padding: 2.5em;
+  background: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0 0 0 / .25);
+}
+
+.heading {
+  text-align: center;
+}
+
+.heading h3 {
+  margin-bottom: 10px;
+}
+
+.input {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  width: 100%;
+  align-self: flex-start;
+}
+
+.input > * {
+  flex: 1;
+}
+
+.input input {
+  flex: 3;
+  padding: 1em;
+  border: 2px solid #ebebeb;
+  border-radius: 5px;
+}
+
+.input input:focus-visible {
+    outline: none;
+    border: 1.5px solid #3d9fff;
+}
+
+.input button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5em;
+  color: #ffffff;
+  background: #3d9fff;
+  font-family: inherit;
+  border: none;
+  padding: .5em 2.5em;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px #3d9fff;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: .5em;
+}
+
+.checkbox p {
+  width: 30ch;
+  font-size: .75em;
+}
