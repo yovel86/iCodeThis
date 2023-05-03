@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap'); */
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  font-family: 'Rubik', sans-serif;
+  background: #f9f9f9;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  margin: 2em auto;
+  max-width: 1200px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.column .item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0 0 0 / .25);
+  overflow: hidden;
+}
+
+.column .item .details {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  width: 100%;
+}
+
+.column .item .details h3 {
+  width: 35ch;
+  font-weight: 500;
+  line-height: 1.25;
+  font-size: 1.15rem;
+}
+
+.column .item img {
+  height: 80px;
+  width: 120px;
+  border-radius: 10px 0 0 10px;
+  object-fit: cover;
+}
+
+.column .item .details .meta {
+  display: flex;
+  align-items: center;
+  gap: .75em;
+  background: #e3e8e9;
+  margin-left: auto;
+  padding: .5em;
+  border-radius: 5px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5em;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0 0 0 / .25);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px 10px 0 0;
+}
+
+.card .details {
+  position: relative;
+  padding: 1em 1.5em;
+  text-align: center;
+}
+
+.card .details p {
+  font-weight: 500;
+}
+
+.card .details span {
+  position: absolute;
+  top: -10px;
+  right: 10px;
+}
+
+.card .meta {
+  display: flex;
+  align-items: center;
+  background: #e3e8e9;
+  padding: 1em 3em;
+  gap: 1.5em;
+  margin-top: auto;
+}
+
+.card .meta p:last-child {
+  margin-left: auto;
+}
