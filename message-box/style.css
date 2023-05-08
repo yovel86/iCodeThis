@@ -1,0 +1,161 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  font-family: 'Poppins', sans-serif;
+  background: #4a91e2;
+  min-height: 100vh;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1.5em 2.5em;
+  color: #333;
+  width: 90vw;
+  min-height: 550px;
+  max-width: 380px;
+  background: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #ece9e9e5;
+}
+
+.header h3 {
+  font-weight: 500;
+  font-size: 1.35rem;
+}
+
+.header img {
+  margin-left: auto;
+  width: 25px;
+  height: 25px;
+  animation: rotate 4s infinite linear;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  background: #f8f8f8;
+  border-radius: 5px;
+  padding: .25em .75em;
+}
+
+.search span {
+  color: #4a91e2;
+}
+
+.search input {
+  appearance: none;
+  border: none;
+  font-family: inherit;
+  background: #f8f8f8;
+  width: 100%;
+  padding: 10px 0;
+  caret-color: #4a90e3;
+  transition: all .3s;
+}
+
+.search input:focus-visible {
+  outline: none;
+}
+
+.search:has(input:focus-visible) {
+  box-shadow: 0 0 10px #4a91e2;
+}
+
+.users {
+  display: flex;
+  flex-direction: column;
+  gap: .7em;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: .75em;
+  cursor: pointer;
+  -webkit-tap-highlight-color: #ffffff00;
+  transition: all .3s;
+}
+
+.user:hover > .details h5 {
+  color: #4a90e3;
+}
+
+.image img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.details h5 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: all .3s;
+}
+
+.details p {
+  font-size: .8rem;
+}
+
+.write {
+  display: grid;
+  place-content: center;
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  background: #4a90e3;
+  color: #ffffff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-tap-highlight-color: #ffffff00;
+  transition: all .3s;
+}
+
+.write span {
+  font-size: 1.6rem;
+}
+
+.write:hover {
+  scale: 1.1;
+  box-shadow: 0 0 10px #4a90e3;
+}
+
+.not-found {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-top: 1em;
+  color: #4a90e3;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
