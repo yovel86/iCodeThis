@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap'); */
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  font-family: 'Rubik', sans-serif;
+  color: #ffffff;
+  background: #f0eff2;
+  min-height: 100vh;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  background: #ffffff;
+  width: 90vw;
+  max-width: 650px;
+  height: 95vh;
+  max-height: 600px;
+  padding: 2em 6em;
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(0 0 0 / .25);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5em;
+  color: #333;
+  background: #ffffff;
+}
+
+.tick {
+  display: grid;
+  place-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 5px solid #ecedf2;
+}
+
+.tick span {
+  color: #b8da2d;
+  font-size: 2rem;
+}
+
+.header p {
+  margin-top: -5px;
+  font-size: .85rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.sent {
+  display: flex;
+  align-items: center;
+  gap: .75em;
+  margin-bottom: 1.25em;
+}
+
+.sent span {
+  font-size: 2rem;
+  animation: scale .75s infinite alternate;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  gap: .75em;
+  background: #232e4d;
+  padding: 3em 2em;
+  border-radius: 10px;
+}
+
+.address > p {
+  margin-bottom: 10px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.comments {
+  background: #fafcfe;
+  color: #333;
+  padding: .25em 1.5em;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  border: 2px solid #f0f2f4;
+  border-radius: 10px;
+}
+
+.comments p {
+  font-size: 1.25rem;
+  margin-left: -10px;
+}
+
+.wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #333;
+  background: #f0f2f4;
+  padding: 1.8em;
+  width: 100%;
+}
+
+.wrapper svg {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 50px;
+  rotate: 180deg;
+  background-repeat: repeat;
+}
+
+.wrapper p {
+  font-size: .85rem;
+  text-align: center;
+}
+
+@media (width <= 580px) {
+  .container {
+    padding: 2em 2.5em;
+  }
+
+  body {
+    font-size: 15px;
+  }
+}
+
+@keyframes scale {
+  0% {
+    scale: 1;
+  }
+
+  100% {
+    scale: 1.25;
+    color: #b8da2d;
+  }
+}
