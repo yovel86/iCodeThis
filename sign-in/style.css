@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  background: #86abee;
+  min-height: 100vh;
+}
+
+.container {
+  position: relative;
+  display: grid;
+  place-content: center;
+  width: 80vw;
+  height: 85vh;
+  font-family: 'Rubik', sans-serif;
+  color: #333333;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0 0 0 / .25);
+  isolation: isolate;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  min-width: 400px;
+  padding: .5em;
+}
+
+.content h3 {
+  font-size: 1.35rem;
+  font-weight: 500;
+  align-self: center;
+}
+
+.content > p {
+  align-self: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.form label {
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+}
+
+.form label p {
+  font-size: .9rem;
+  font-weight: 600;
+}
+
+.form label input {
+  font-family: inherit;
+  padding: .95em .75em;
+  border-radius: 3px;
+  border: 2px solid #dedbdb;
+  transition: all .15s;
+}
+
+.form label input:focus-visible {
+  outline: none;
+  border: 2px solid #4090f2;
+}
+
+::placeholder {
+  font-family: inherit;
+}
+
+.form button {
+  background: #4090f2;
+  padding: .95em;
+  border-radius: 5px;
+  font-family: inherit;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: all .3s;
+  -webkit-tap-highlight-color: #ffffff00;
+}
+
+.form button:hover {
+  box-shadow: 0 0 10px #4090f2;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+}
+
+.remember label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: .5em;
+  cursor: pointer;
+  -webkit-tap-highlight-color: #ffffff00;
+}
+
+.remember label p {
+  font-weight: 400;
+}
+
+.remember a {
+  margin-left: auto;
+  color: #4090f2;
+  font-size: .85rem;
+  text-decoration: none;
+}
+
+.remember i:hover {
+  text-decoration: underline;
+}
+
+.signup {
+  color: #4090f2;
+  text-decoration: none;
+  font-size: .9rem;
+  transform: all .2s;
+}
+
+.signup:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  position: absolute;
+  bottom: 20px;
+  left: 31%;
+  display: flex;
+  align-items: center;
+  gap: 3em;
+}
+
+.footer p {
+  font-size: .85rem;
+}
+
+.wave1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #a5cbf9;
+  --mask:
+    radial-gradient(131.49px at 50% 177.00px,#000 99%,#0000 101%) calc(50% - 120px) 0/240px 100%,
+    radial-gradient(131.49px at 50% -117px,#0000 99%,#000 101%) 50% 60px/240px 100% repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+  height: 120px;
+  overflow: hidden;
+  z-index: -1;
+  border-radius: 15px;
+}
+.wave2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #d3e6fd;
+  --mask:
+  radial-gradient(75.47px at 50% 104.00px,#000 99%,#0000 101%) calc(50% - 80px) 0/160px 100%,
+  radial-gradient(75.47px at 50% -64px,#0000 99%,#000 101%) 50% 40px/160px 100% repeat-x;
+  -webkit-mask: var(--mask);
+        mask: var(--mask);
+  height: 125px;
+  overflow: hidden;
+  z-index: -2;
+  border-radius: 15px;
+}
+
+@media (width <= 560px) {
+  .container {
+    width: 90vw;
+  }
+  .content {
+    min-width: 300px;
+  }
+  .footer {
+    display: none;
+  }
+}
+@media (width <= 400px) {
+  .content {
+    min-width: 200px;
+  }
+}
