@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  color: #333;
+  background: #f8f8f8;
+  min-height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto 400px;
+  gap: 1.5em;
+  margin: 2em auto;
+  width: 90vw;
+  height: 90vh;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  background: #ffffff;
+  width: 100%;
+  height: 100%;
+  padding: 1.5em 1.75em;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0 0 0 / .25);
+}
+
+.type h3 {
+  margin-bottom: 2em;
+}
+
+.types {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  justify-content: space-around;
+}
+
+.percent {
+  display: flex;
+  flex-direction: column;
+  gap: .75em;
+  align-items: center;
+}
+
+.percent .round {
+  display: grid;
+  place-content: center;
+  width: 110px;
+  height: 110px;
+  border: 8px solid #f4f4f4;
+  border-radius: 50%;
+}
+
+.percent:first-child .round {
+  border-top: 10px solid #e30213;
+}
+.percent:nth-child(2) .round {
+  border-top: 10px solid #e30213;
+  border-right: 10px solid #e30213;
+}
+.percent:nth-child(3) .round {
+  border-top: 10px solid #e30213;
+}
+.percent:last-child .round {
+  border-top: 10px solid #e30213;
+}
+
+.percent .round span {
+  color: #333;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.percent p {
+  color: #9a9a9a;
+  width: 9ch;
+  text-align: center;
+}
+
+.revenue {
+  display: flex;
+  align-items: center;
+  gap: 6em;
+}
+
+.revenue h3 {
+  font-size: 1.4rem;
+}
+
+.revenue .current {
+  color: #9a9a9a;
+  margin-left: auto;
+}
+
+.revenue .current p:nth-child(2) {
+  color: #333;
+  font-weight: 500;
+}
+
+.revenue .previous {
+  color: #9a9a9a;
+}
+
+.revenue > div p:first-child {
+  margin-top: .75em;
+}
+
+.revenue > div p:nth-child(2) {
+  font-size: 2rem;
+}
+
+.graph {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.unit {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 1.5em;
+  align-items: center;
+}
+
+.unit .line {
+  height: 3px;
+  background: #f4f4f4;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  align-items: center;
+}
+
+.all {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.managers {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  padding: 1.5em 1.75em;
+  background: #ffffff;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0 0 0 / .25);
+}
+
+.managers .header h3 {
+  margin-bottom: .5em;
+}
+
+.managers .list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.manager h4 {
+  font-weight: 500;
+  margin-bottom: .5em;
+}
+
+.manager .meta {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: .5em;
+}
+
+.manager .meta .percent {
+  position: relative;
+  height: 12px;
+  background: #f4f4f4;
+  border-radius: 5px;
+}
+
+.manager .meta span {
+  font-weight: 500;
+}
+
+.manager .percent::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #333;
+  border-radius: 5px;
+}
+
+.manager:first-child .percent::before {
+  width: 43%;
+}
+.manager:nth-child(2) .percent::before {
+  width: 24%;
+}
+.manager:nth-child(3) .percent::before {
+  width: 31%;
+}
+.manager:nth-child(4) .percent::before {
+  width: 12%;
+}
+.manager:nth-child(5) .percent::before {
+  width: 6%;
+}
+.manager:last-child .percent::before {
+  width: 2%;
+}
+
+.managers > button {
+  color: #ffffff;
+  background: #e30213;
+  font-family: inherit;
+  width: fit-content;
+  padding: .65em 3.5em;
+  border-radius: 5px;
+  border: none;
+  align-self: center;
+  margin-top: auto;
+  margin-bottom: 1em;
+  cursor: pointer;
+  transition: all .3s;
+  -webkit-tap-highlight-color: #ffffff00;
+}
+
+.managers > button:hover {
+  box-shadow: 0 0 10px #e30213;
+}
+
+
+
+
