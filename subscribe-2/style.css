@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  font-family: 'Rubik', sans-serif;
+  color: #333333;
+  background: #eff1f3;
+  min-height: 100vh;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  padding: 3em 3.5em;
+  background: #ffffff;
+  width: 90vw;
+  max-width: 700px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0 0 0 / .25);
+}
+
+.container > p {
+  text-align: center;
+  line-height: 1.5;
+}
+
+.signup {
+  display: grid;
+  grid-template-columns: 400px auto;
+  border-radius: 5px;
+}
+
+.signup input {
+  font-family: inherit;
+  padding: 1em;
+  border: 2px solid #ede9e9;
+  border-radius: 5px 0 0 5px;
+  transition: border-color .3s;
+}
+
+.signup input:focus-visible {
+  border-color: #4393f5;
+  outline: none;
+}
+
+.signup button {
+  font-family: inherit;
+  color: #ffffff;
+  background: #4393f5;
+  padding: 0 1em;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  transition: background .3s;
+  cursor: pointer;
+  -webkit-tap-highlight-color: #ffffff00;
+}
+
+.signup button:hover {
+  background: #378cf5;
+}
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+  align-items: center;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: .75em;
+}
+
+.user p {
+  font-weight: 500;
+  font-size: .9rem;
+}
+
+img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  outline: 3px solid #4393f5;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #d3cdcd;
+  transition: all .3s;
+  cursor: pointer;
+  -webkit-tap-highlight-color: #ffffff00;
+}
+
+.close:hover {
+  color: #4393f5;
+  scale: 1.2;
+}
+
+@media (width <= 660px) {
+  .signup {
+    grid-template-columns: 1fr;
+    gap: .5em;
+  }
+
+  .signup input {
+    width: 400px;
+    border-radius: 5px;
+  }
+
+  .signup button {
+    padding: .8em;
+    border-radius: 5px;
+  }
+}
+
+@media (width <= 480px) {
+  .signup input {
+    width: 320px;
+  }
+  .comment i {
+    font-size: .85rem;
+  }
+  .user p {
+    font-size: .75rem;
+  }
+}
+@media (width <= 380px) {
+  .signup input {
+    width: 250px;
+  }
+}
