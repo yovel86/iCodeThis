@@ -1,0 +1,56 @@
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="script.js" defer></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="video">
+      <div class="msg">
+        <div>
+          <p>10</p>
+          <span class="material-icons">fast_forward</span>
+        </div>
+      </div>
+      <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"></video>
+    </div>
+    
+    <div class="controls">
+
+      <div class="video-controls">
+        <span class="material-icons backward" onclick="backwardTenSecs()">fast_rewind</span>
+        <span class="material-icons play" onclick="togglePlay()">play_arrow</span>
+        <span class="material-icons forward" onclick="forwardTenSecs()">fast_forward</span>
+      </div>
+
+      <div class="play-range">
+        <div class="range"></div>
+        <p class="time"></p>
+      </div>
+
+      <div class="audio">
+        <span class="material-icons">volume_up</span>
+        <div class="volume"></div>
+      </div>
+
+      <span class="material-icons fullscreen">open_in_full</span>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>
